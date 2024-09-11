@@ -30,6 +30,12 @@ function asb_video_scripts()
 	if (is_page_template('page-about-us.php')) {
 		wp_enqueue_style('asb-video-about-style', get_template_directory_uri() . '/assets/css/about_us.css');
 	}
+	if (is_page_template('page-maintenance.php')) {
+		wp_enqueue_style('asb-video-about-style', get_template_directory_uri() . '/assets/css/installation_maintenance.css');
+	}
+	if (is_page_template('page-working.php')) {
+		wp_enqueue_style('asb-video-about-style', get_template_directory_uri() . '/assets/css/working.css');
+	}
 }
 
 /**
