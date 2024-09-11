@@ -1,0 +1,51 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(menu.css);
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.body .wrapper {
+    height: -webkit-fill-available;
+    height: -moz-available;
+    padding: 0 470px 0 410px;
+    z-index: 3;
+}
+
+@media (min-width: 1920px) and (max-width: 2559.89px) {
+    .wrapper {
+        padding: 0 120px !important;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919.89px) {
+    .wrapper {
+        padding: 0 80px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439.89px) {
+    .wrapper {
+        padding: 0 60px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.89px) {
+    .wrapper {
+        padding: 0 40px !important;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767.89px) {
+    .wrapper {
+        padding: 0 30px !important;
+    }
+}
+
+@media (max-width: 424.89px) {
+    .wrapper {
+        padding: 0 20px !important;
+    }
+}

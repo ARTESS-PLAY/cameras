@@ -1,0 +1,261 @@
+@import url(general.css);
+
+.header {
+	width: 100%;
+	padding: 50px 470px 0 410px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.header .custom-logo-link {
+	display: flex;
+}
+
+.header .header__links {
+	display: flex;
+	gap: 40px;
+}
+
+.header .header__links .header__link {
+	height: fit-content;
+	color: var(--black);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s;
+}
+
+.header .header__links .header__link:hover,
+.header .header__links .header__link:active,
+.header .header__links .header__link:focus,
+.header .header__links .header__link_active {
+	color: var(--green);
+	border-bottom: 1px solid var(--green);
+}
+
+.header .header__btns {
+	display: flex;
+	width: fit-content;
+	justify-self: end;
+}
+
+.header .header__btns .header__menu-btn {
+	display: none;
+}
+
+.header .header__btns .header__phone-btn {
+	background-color: var(--green);
+	border-radius: 16px;
+	padding: 13px 24px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	transition: 0.3s;
+	cursor: pointer;
+	border: none;
+}
+
+.header .header__btns .header__phone-btn_hidden {
+	display: none;
+}
+
+.header .header__btns .header__phone-btn .header__phone-btn-text {
+	color: var(--white);
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 600;
+}
+
+.header .header__btns .header__phone-btn .header__phone-btn-icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../svg/phone_menu.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header .header__btns .header__phone-btn:hover,
+.header .header__btns .header__phone-btn:active,
+.header .header__btns .header__phone-btn:focus {
+	background-color: var(--green-on);
+}
+
+.header .header__vector-desktop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	max-height: 100vh;
+}
+
+@media (min-width: 1920px) and (max-width: 2559.89px) {
+	.header {
+		padding: 50px 120px 0 120px;
+	}
+}
+
+@media (min-width: 1440px) and (max-width: 1919.89px) {
+	.header {
+		padding: 20px 80px 0 80px;
+	}
+
+	.header .custom-logo-link img {
+		width: 250px;
+		height: auto;
+	}
+
+	.header .header__links {
+		gap: 20px;
+	}
+
+	.header .header__links .header__link {
+		font-size: 16px;
+	}
+
+	.header .header__btns .header__phone-btn .header__phone-btn-text {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1439.89px) {
+	.header {
+		padding: 20px 60px 0 60px;
+		gap: 12px;
+		display: grid;
+		grid-template-areas: 'A C' 'B B';
+	}
+
+	.header .custom-logo-link {
+		grid-area: A;
+	}
+
+	.header .custom-logo-link img {
+		width: 300px;
+		height: auto;
+	}
+
+	.header .header__links {
+		grid-area: B;
+		justify-content: space-evenly;
+		gap: 0;
+		padding: 0 20px;
+	}
+
+	.header .header__links .header__link {
+		font-size: 16px;
+	}
+
+	.header .header__btns .header__phone-btn {
+		grid-area: C;
+		width: max-content;
+		justify-self: end;
+	}
+}
+
+@media (max-width: 1023.89px) {
+	.header {
+		padding: 20px 40px 0 40px;
+	}
+
+	.header .custom-logo-link img {
+		width: 250px;
+		height: auto;
+	}
+
+	.header .header__links {
+		padding: 0;
+	}
+
+	.header .header__links .header__link {
+		font-size: 15px;
+	}
+
+	.header .header__btns .header__phone-btn {
+		gap: 12px;
+	}
+
+	.header .header__btns .header__phone-btn .header__phone-btn-text {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: 767.89px) {
+	.header {
+		padding: 20px 30px 0 30px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.header .custom-logo-link {
+		order: 1;
+	}
+
+	.header .custom-logo-link img {
+		width: auto;
+		height: 60px;
+	}
+
+	.header .header__links {
+		display: none;
+	}
+
+	.header .header__btns {
+		order: 2;
+		flex-direction: row-reverse;
+		gap: 40px;
+	}
+
+	.header .header__btns .header__menu-btn {
+		display: flex;
+		width: 42px;
+		height: 24px;
+		background: transparent;
+		border: none;
+		background-image: url(../svg/burger_menu.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: 0.3s;
+	}
+
+	.header .header__btns .header__menu-btn_open {
+		background-image: url(../svg/burger_menu_active.svg);
+	}
+
+	.header .header__btns .header__phone-btn {
+		background-color: transparent;
+		padding: 0;
+		gap: 0;
+	}
+
+	.header .header__btns .header__phone-btn .header__phone-btn-text {
+		display: none;
+	}
+
+	.header .header__btns .header__phone-btn .header__phone-btn-icon {
+		background-image: url(../svg/phone_menu_active.svg);
+	}
+
+	.header .header__vector-desktop {
+		display: none;
+	}
+}
+
+@media (max-width: 424.89px) {
+	.header {
+		padding: 20px 20px 0 20px;
+	}
+
+	.header .custom-logo-link img {
+		width: auto;
+		height: 40px;
+	}
+
+	.header .header__btns {
+		gap: 24px;
+	}
+}

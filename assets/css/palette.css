@@ -1,0 +1,25 @@
+:root {
+    --black: #212325;
+    --green: #137332;
+    --green-on: #1EB251;
+    --light-green: #7DBA28;
+    --white: #FFFFFF;
+    --grey: #212325CC;
+    --green-2: #239713;
+    --green-2-on: #3EC30D;
+    --light-green-2: #A1DF4A;
+    --green-card: #DFF9D5;
+    --enter: #349754;
+    --enter-on: #158846;
+    --delete: #BADFAC;
+    --delete-2: #94D67B;
+    --btn-number: #54B731;
+    --menu-links: #0C5A26;
+    --blue: #398CC8;
+    --blue-on: #36709a;
+    --light-grey: #ebebeb;
+    --light-grey-2: #cbd4d7;
+    --dark-grey: #202028;
+    --box-shadow-1: 0 3px 24px 0 #21232540;
+    --box-shadow-2: 0 4px 4px 0 #00000040;
+}

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Regular.eot');
+    src: url('Mulish-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Regular.woff2') format('woff2'),
+        url('Mulish-Regular.woff') format('woff'),
+        url('Mulish-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-ExtraBold.eot');
+    src: url('Mulish-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-ExtraBold.woff2') format('woff2'),
+        url('Mulish-ExtraBold.woff') format('woff'),
+        url('Mulish-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Bold.eot');
+    src: url('Mulish-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Bold.woff2') format('woff2'),
+        url('Mulish-Bold.woff') format('woff'),
+        url('Mulish-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-SemiBold.eot');
+    src: url('Mulish-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-SemiBold.woff2') format('woff2'),
+        url('Mulish-SemiBold.woff') format('woff'),
+        url('Mulish-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Medium.eot');
+    src: url('Mulish-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Medium.woff2') format('woff2'),
+        url('Mulish-Medium.woff') format('woff'),
+        url('Mulish-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
