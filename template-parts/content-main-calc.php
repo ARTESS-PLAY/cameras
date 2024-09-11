@@ -1,7 +1,7 @@
 <div class="info__calculation">
 	<div class="info__input-area">
 		<input class="info__input" id="calcInput1" type="number" onkeydown="return false;" />
-		<span class="info__input-name">количество помещений</span>
+		<span class="info__input-name"><?php echo esc_html__('количество помещений', 'asbvideo') ?></span>
 		<div class="info__calculator info__calculator-closed" id="calculator1">
 			<div class="info__calculator-btn-1 info__calculator-btn-number">1</div>
 			<div class="info__calculator-btn-2 info__calculator-btn-number">2</div>
@@ -21,7 +21,7 @@
 	</div>
 	<div class="info__input-area">
 		<input class="info__input" id="calcInput2" type="number" onkeydown="return false;" />
-		<span class="info__input-name">квадратных метров</span>
+		<span class="info__input-name"><?php echo esc_html__('квадратных метров', 'asbvideo') ?></span>
 		<div class="info__calculator info__calculator-closed" id="calculator2">
 			<div class="info__calculator-btn-1 info__calculator-btn-number">1</div>
 			<div class="info__calculator-btn-2 info__calculator-btn-number">2</div>
@@ -49,8 +49,8 @@
 						d="m1.5 2.654 3.53 5.032 5.47 -6" />
 				</svg>
 			</div>
-			<span class="info__input-name">настройка сети</span>
+			<span class="info__input-name"><?php echo esc_html__('настройка сети', 'asbvideo') ?></span>
 		</label>
 	</div>
-	<button class="info__btn">Рассчитать стоимость</button>
+	<button class="info__btn"><?php echo esc_html__('Рассчитать стоимость', 'asbvideo') ?></button>
 </div>

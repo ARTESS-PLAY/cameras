@@ -33,7 +33,7 @@ get_header(); ?>
 	<div class="info__calculation-btn-wrapper">
 		<button class="info__calculation-btn">
 			<img src="<?php bloginfo('template_url'); ?>/assets/svg/calculator.svg" alt="Калькулятор">
-			<span class="info__calculation-btn-text">Рассчитать стоимость</span>
+			<span class="info__calculation-btn-text"><?php echo esc_html__('Рассчитать стоимость', 'asbvideo') ?></span>
 		</button>
 		<div class="info__calculation-btn-img" style="background-image: url('<?php the_field('main_img_mobile'); ?>')"></div>
 	</div>
@@ -43,7 +43,7 @@ get_header(); ?>
 	<div class="pictures__camera" style="background-image: url(<?php the_field('main_img_bg'); ?>);"></div>
 	<div class="pictures__man">
 		<img src="<?php the_field('main_img'); ?>"
-			alt="Человек, который устанавливает и обслуживает системы видеонаблюдения и т.п. Стоит в телефоне.">
+			alt="">
 	</div>
 </div>
 </main>
