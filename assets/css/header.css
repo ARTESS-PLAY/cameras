@@ -31,7 +31,7 @@
 .header .header__links .header__link:hover,
 .header .header__links .header__link:active,
 .header .header__links .header__link:focus,
-.header .header__links .header__link_active {
+.header .header__links [aria-current='page'] {
 	color: var(--green);
 	border-bottom: 1px solid var(--green);
 }
