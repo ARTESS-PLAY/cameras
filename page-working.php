@@ -5,7 +5,7 @@ Template Post Type: page
 */
 get_header(); ?>
 <div class="info">
-	<p class="info__title"><?php the_field('working_title'); ?></p>
+	<p class="info__title"><?php the_title(); ?></p>
 	<div class="info__stages">
 
 		<?php if (get_field('working_repeater')): ?>

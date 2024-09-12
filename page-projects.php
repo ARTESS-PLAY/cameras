@@ -6,7 +6,7 @@ Template Post Type: page
 get_header(); ?>
 <div class="info">
 	<div class="info__block">
-		<p class="info__title">Наши проекты</p>
+		<p class="info__title"><?php the_title() ?></p>
 		<p class="info__text"></p>
 	</div>
 </div>

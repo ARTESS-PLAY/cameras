@@ -42,6 +42,21 @@ function asbvideo_register_post_types()
 		'has_archive'         => true,
 		'rewrite'             => true,
 		'query_var'           => true,
+		'show_in_rest'        => true,
+		'rest_base'           => true,
 	];
 	register_post_type('projects', $args);
+}
+
+/*
+   Регистрация и подключение options page Acf
+*/
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page(array(
+		'page_title' => esc_html__('Основные контакты', 'asbvideo'),
+		'menu_title' => esc_html__('Основные контакты', 'asbvideo'),
+		'menu_slug'  => esc_html__('my-options'),
+		'capability' => esc_html__('edit_posts'),
+		'redirect' => false
+	));
 }

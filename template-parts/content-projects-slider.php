@@ -2,8 +2,7 @@
 	<div class="slider__header">
 		<div class="slider__navigation">
 			<button class="slider__button-prev"><img src="<?php bloginfo('template_url') ?>/assets/svg/arrow.svg" alt="Стрелка влево"></button>
-			<p class="slider__text">
-				<?php the_title() ?></p>
+			<p class="slider__text"></p>
 			<button class="slider__button-next"><img src="<?php bloginfo('template_url') ?>/assets/svg/arrow.svg" alt="Стрелка вправо"></button>
 		</div>
 		<div class="slider__counter">
@@ -39,5 +38,6 @@
 		</div>
 	</div>
 </div>
+
 
 <p class="description"></p>

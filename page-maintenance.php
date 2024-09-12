@@ -8,8 +8,9 @@ get_header(); ?>
 <div class="info">
 	<div class="info__mobile-block">
 		<div class="info__text">
-			<p class="info__title"><?php the_field('maintenance_title'); ?></p>
-			<?php the_field('maintenance_text'); ?>
+			<p class="info__title">
+				<?php the_title(); ?>
+				<?php the_field('maintenance_text'); ?>
 		</div>
 		<img src="<?php the_field('maintenance_img_mobile'); ?>" class="info__picture">
 	</div>

@@ -12,7 +12,7 @@ get_header(); ?>
 	}
 </style>
 <div class="info">
-	<p class="info__title"><?php the_field('about_title'); ?></p>
+	<p class="info__title"><?php the_title(); ?></p>
 	<div class="info__characteristics">
 		<p class="info__characteristic">
 			<?php the_field('about_text'); ?>

@@ -13,7 +13,7 @@
 require_once __DIR__ . '/inc/__loader.php';
 
 /**
- * Enqueue scripts and styles.
+ * Подключаем стили и скрипты
  */
 
 add_action('wp_enqueue_scripts', 'asbvideo_scripts');
@@ -51,9 +51,8 @@ function asbvideo_scripts()
 }
 
 /**
- * Sets up theme defaults and registers support for various WordPress features.
  *
- * as indicating support for post thumbnails.
+ * Добавление Миниатюры, тайтлтэг, регистрация меню и кастом лого
  */
 
 add_action('after_setup_theme', 'asbvideo_theme_setup');
@@ -94,16 +93,4 @@ function svg_upload_allow($mimes)
 	$mimes['svg']  = 'image/svg';
 
 	return $mimes;
-}
-/*
-   Регистрация и подключение options page Acf
-*/
-if (function_exists('acf_add_options_page')) {
-	acf_add_options_page(array(
-		'page_title' => esc_html__('Основные контакты', 'asbvideo'),
-		'menu_title' => esc_html__('Основные контакты', 'asbvideo'),
-		'menu_slug'  => esc_html__('my-options'),
-		'capability' => esc_html__('edit_posts'),
-		'redirect' => false
-	));
 }

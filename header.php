@@ -73,7 +73,7 @@
             <div class="wrapper__menu-footer">
                 <div class="wrapper__menu-location">
                     <div class="wrapper__menu-icon"></div>
-                    <span class="wrapper__menu-name"><span>Москва</span><span> и Московская область</span></span>
+                    <span class="wrapper__menu-name"><span><?php the_field('footer_location', 'options'); ?></span></span>
                 </div>
                 <p class="wrapper__menu-rights"><?php echo esc_html__('2010-2014 © Все права защищены', 'asbvideo') ?></p>
                 <img src="<?php bloginfo('template_url'); ?>/assets/svg/vectors/vector_5.svg" class="wrapper__menu-vector-1" alt="Вектор">
