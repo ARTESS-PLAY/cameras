@@ -52,7 +52,7 @@ function asbvideo_scripts()
 
 /**
  *
- * Добавление Миниатюры, тайтлтэг, регистрация меню и кастом лого
+ * Добавление Миниатюры, тайтлтэг, регистрация меню и кастом
  */
 
 add_action('after_setup_theme', 'asbvideo_theme_setup');

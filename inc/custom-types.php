@@ -38,7 +38,7 @@ function asbvideo_register_post_types()
 		'menu_position'       => 4,
 		'menu_icon'           => 'dashicons-admin-generic',
 		'hierarchical'        => false,
-		'supports'            => ['title', 'editor', 'excerpt', 'thumbnail'],
+		'supports'            => ['title', 'excerpt', 'thumbnail'],
 		'has_archive'         => true,
 		'rewrite'             => true,
 		'query_var'           => true,

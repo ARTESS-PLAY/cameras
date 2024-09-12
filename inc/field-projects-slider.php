@@ -17,7 +17,7 @@ $project_text = array();
 
 foreach ($all_posts as $post) {
 	$project_titles[] = $post->post_title;
-	$project_text[] = $post->post_content;
+	$project_text[] = $post->post_excerpt;
 }
 ?>
 <script>
