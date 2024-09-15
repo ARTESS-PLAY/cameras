@@ -17,11 +17,14 @@ get_header(); ?>
 	<section class="info__section">
 		<?php the_field('maintenance_descr'); ?>
 	</section>
-	<button class="info__btn"><?php echo esc_html__('Оставить заявку', 'asbvideo'); ?></button>
+	<button class="info__btn btn-green" id="btn_open-application"><?php echo esc_html__('Оставить заявку', 'asbvideo'); ?></button>
 </div>
 <div class="pictures">
 	<img src="<?php the_field('maintenance_img_bg'); ?>" class="pictures__camera">
 	<img src="<?php the_field('maintenance_img'); ?>" class="pictures__man">
 </div>
-</main>
+
+<?php get_template_part('template-parts/modals/modal', 'montage-leed-result'); ?>
+<?php get_template_part('template-parts/modals/modal', 'montage-leed'); ?>
+
 <?php get_footer(); ?>

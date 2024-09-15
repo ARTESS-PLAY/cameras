@@ -1,6 +1,6 @@
 <div class="info__calculation">
 	<div class="info__input-area">
-		<input class="info__input" id="calcInput1" type="number" onkeydown="return false;" />
+		<input class="info__input" id="calcInput1"  />
 		<span class="info__input-name"><?php echo esc_html__('количество помещений', 'asbvideo') ?></span>
 		<div class="info__calculator info__calculator-closed" id="calculator1">
 			<div class="info__calculator-btn-1 info__calculator-btn-number">1</div>
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="info__input-area">
-		<input class="info__input" id="calcInput2" type="number" onkeydown="return false;" />
+		<input class="info__input" id="calcInput2" />
 		<span class="info__input-name"><?php echo esc_html__('квадратных метров', 'asbvideo') ?></span>
 		<div class="info__calculator info__calculator-closed" id="calculator2">
 			<div class="info__calculator-btn-1 info__calculator-btn-number">1</div>

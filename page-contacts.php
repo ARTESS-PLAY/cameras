@@ -82,5 +82,4 @@ get_header(); ?>
 	<img src="<?php the_field('contacts_img') ?>" class="pictures__man"
 		alt="">
 </div>
-</main>
 <?php get_footer(); ?>

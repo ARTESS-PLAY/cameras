@@ -1,0 +1,54 @@
+@import url("catalog_general.css");
+
+.wrapper .catalog {
+    gap: 20px;
+}
+
+.wrapper .catalog .catalog__section-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+}
+
+.wrapper .catalog .catalog__section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-height: 426px;
+}
+
+@media (max-width: 1023.89px) {
+    .wrapper .catalog {
+        padding-bottom: 20px;
+    }
+
+    .wrapper .catalog .catalog__section-content {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 767.89px) {
+    .wrapper .catalog {
+        padding: 0 10px;
+    }
+
+    .wrapper .catalog .catalog__section-content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 374.89px) {
+    .wrapper .info {
+        padding-bottom: 20px !important;
+    }
+
+    .wrapper .catalog .catalog__section-title {
+        padding-left: 10px;
+    }
+}
+
+@media (max-height: 999.89px) {
+    .wrapper .catalog {
+        padding-bottom: 40px;
+    }
+}

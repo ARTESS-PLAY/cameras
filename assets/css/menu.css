@@ -1,193 +1,163 @@
-@import url(general.css);
+@import url("general.css");
 
 .body_menu-open {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .body_menu-open .header {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .wrapper {
-	position: relative;
-	overflow-x: clip;
-	overflow-y: visible;
+    position: relative;
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 .wrapper_menu-open {
-	overflow: visible;
+    overflow: visible;
 }
 
 .wrapper .wrapper__menu {
-	height: calc(100vh - 80px);
-	width: 100%;
-	background-color: var(--white);
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	transition: 0.2s;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	text-align: center;
-	overflow-y: auto;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
 }
 
 .wrapper .wrapper__menu_open {
-	left: 0;
+    left: 0;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-links {
-	width: 100%;
-	padding: 0 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-	align-items: center;
-	z-index: 3;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    z-index: 3;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-links .wrapper__menu-header-links,
 .wrapper .wrapper__menu .wrapper__menu-links .wrapper__menu-footer-links {
-	display: flex;
-	flex-direction: column;
-	width: fit-content;
-	gap: 8px;
-	align-items: center;
-	text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
 }
 
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-links
-	.wrapper__menu-header-links
-	.wrapper__menu-link,
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-links
-	.wrapper__menu-footer-links
-	.wrapper__menu-link {
-	color: var(--menu-links);
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 28px;
+.wrapper .wrapper__menu .wrapper__menu-links .wrapper__menu-header-links .wrapper__menu-link,
+.wrapper .wrapper__menu .wrapper__menu-links .wrapper__menu-footer-links .wrapper__menu-link {
+    color: var(--menu-links);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
 }
 
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-links
-	.wrapper__menu-footer-links
-	.wrapper__menu-link {
-	font-size: 20px;
-	line-height: 24px;
+.wrapper .wrapper__menu .wrapper__menu-links .wrapper__menu-footer-links .wrapper__menu-link {
+    font-size: 20px;
+    line-height: 24px;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-footer {
-	width: 100%;
-	padding: 50px 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	position: relative;
+    width: 100%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
 }
 
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-footer
-	.wrapper__menu-location
-	.wrapper__menu-icon {
-	background-image: url(../svg/location_white.svg);
-	height: 20px;
-	width: 19px;
-	background-repeat: no-repeat;
-	background-size: contain;
+.wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location .wrapper__menu-icon {
+    background-image: url("../img/icons/location_white.svg");
+    height: 20px;
+    width: 19px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-footer
-	.wrapper__menu-location
-	.wrapper__menu-name {
-	display: flex;
-	flex-direction: column;
-	line-height: 20px;
+.wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location .wrapper__menu-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
 }
 
-.wrapper
-	.wrapper__menu
-	.wrapper__menu-footer
-	.wrapper__menu-location
-	.wrapper__menu-name
-	span {
-	font-size: 18px;
-	color: var(--white);
-	font-weight: 600;
+.wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location .wrapper__menu-name span {
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 600;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-rights {
-	font-size: 14px;
-	text-align: center;
-	font-weight: 500;
-	line-height: 24px;
-	color: var(--white);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--white);
 }
 
 .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-vector-1 {
-	position: absolute;
-	left: 0;
-	bottom: 64%;
-	z-index: 1;
-	width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 64%;
+    z-index: 1;
+    width: 100%;
 }
 
 .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-vector-2 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 @media (max-width: 424.89px) {
-	.wrapper .wrapper__menu {
-		height: calc(100vh - 60px);
-	}
+    .wrapper .wrapper__menu {
+        height: calc(100vh - 60px);
+    }
 
-	.wrapper
-		.wrapper__menu
-		.wrapper__menu-footer
-		.wrapper__menu-location
-		.wrapper__menu-name
-		span {
-		font-size: 16px;
-	}
+    .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location .wrapper__menu-name span {
+        font-size: 16px;
+    }
 
-	.wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-rights {
-		font-size: 12px;
-	}
+    .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-rights {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 359.89px) {
-	.wrapper .wrapper__menu .wrapper__menu-footer {
-		gap: 4px;
-	}
+    .wrapper .wrapper__menu .wrapper__menu-footer {
+        gap: 4px;
+    }
 
-	.wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location {
-		gap: 4px;
-	}
+    .wrapper .wrapper__menu .wrapper__menu-footer .wrapper__menu-location {
+        gap: 4px;
+    }
 }
 
 @media (min-width: 768px) {
-	.wrapper .wrapper__menu {
-		display: none;
-	}
+    .wrapper .wrapper__menu {
+        display: none;
+    }
 }

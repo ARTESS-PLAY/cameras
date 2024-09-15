@@ -1,0 +1,125 @@
+@import url("catalog_general.css");
+
+.wrapper .catalog {
+    gap: 20px;
+}
+
+.wrapper .catalog .catalog__section-content {
+    display: grid;
+    gap: 10px;
+}
+
+.wrapper .catalog .content-articles {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.wrapper .catalog .content-cards {
+    grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+}
+
+.wrapper .catalog .catalog__article {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: var(--light-grey-4);
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.wrapper .catalog .catalog__article:hover {
+    background-color: var(--light-blue);
+    box-shadow: var(--box-shadow-3);
+}
+
+.wrapper .catalog .catalog__article-img {
+    border-radius: 10px;
+}
+
+.wrapper .catalog .catalog__article-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.wrapper .catalog .catalog__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 16px;
+    gap: 4px;
+    background-color: var(--white);
+    align-items: center;
+    text-align: center;
+    transition: 0.3s all;
+}
+
+.wrapper .catalog .catalog__card:hover {
+    background-color: var(--light-grey-5);
+    box-shadow: var(--box-shadow-3);
+}
+
+.wrapper .catalog .catalog__card-img {
+    width: 120px;
+    height: 114px;
+}
+
+.wrapper .catalog .catalog__card-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    width: min-content;
+}
+
+@media (max-width: 1023.89px) {
+    .wrapper .catalog .catalog__article {
+        align-items: center;
+    }
+
+    .wrapper .catalog .catalog__article-img {
+        max-height: 120px;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 767.89px) {
+    .wrapper .catalog {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 374.89px) {
+    .wrapper .info {
+        padding-bottom: 20px !important;
+    }
+
+    .wrapper .catalog .catalog__article-title,
+    .wrapper .catalog .catalog__article-title {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 999.89px) {
+    .wrapper {
+        height: fit-content !important;
+    }
+
+    .wrapper .catalog {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-height: 999.89px) {
+    .wrapper .catalog {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-height: 1439.89px) {
+    .wrapper .info,
+    .wrapper .catalog {
+        height: fit-content !important;
+        justify-content: flex-start !important;
+    }
+}

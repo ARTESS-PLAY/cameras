@@ -11,7 +11,8 @@ get_header(); ?>
 	</div>
 </div>
 
+<?php get_template_part('template-parts/field', 'projects-slider'); ?>
+
 <?php get_template_part('template-parts/content', 'projects-slider'); ?>
-</main>
 
 <?php get_footer(); ?>

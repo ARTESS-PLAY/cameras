@@ -44,5 +44,4 @@ get_header(); ?>
 	<img src="<?php the_field('about_img_bg'); ?>" class="pictures__building">
 	<img src="<?php the_field('about_img'); ?>" class="pictures__man">
 </div>
-</main>
 <?php get_footer(); ?>

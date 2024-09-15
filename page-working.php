@@ -36,5 +36,4 @@ get_header(); ?>
 	<img src="<?php the_field('working_img'); ?> " class="pictures__worker" alt="Работник производит монтажные работы">
 </div>
 
-</main>
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-@import url(body.css);
+@import url('body.css');
 
 .wrapper {
     display: flex;
@@ -62,26 +62,10 @@
 }
 
 .wrapper .info .info__btn {
-    background-color: var(--light-green);
     box-shadow: var(--box-shadow-2);
-    color: var(--white);
     padding: 16px 24px;
     height: 60px;
     width: 40%;
-    border-radius: 16px;
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-}
-
-.wrapper .info .info__btn:hover,
-.wrapper .info .info__btn:active,
-.wrapper .info .info__btn:focus {
-    background-color: var(--light-green-2);
 }
 
 .wrapper .info .info__picture {
@@ -225,7 +209,7 @@
     }
 
     .wrapper .info .info__description,
-    .wrapper .info .info__section .info__section-item p, 
+    .wrapper .info .info__section .info__section-item p,
     .wrapper .info .info__section .info__section-item span {
         font-size: 14px;
         line-height: 20px;

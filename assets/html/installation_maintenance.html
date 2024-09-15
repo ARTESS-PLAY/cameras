@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camera Project</title>
-    <link rel="stylesheet" href="../css/installation_maintenance.css">
+    <link rel="stylesheet" href="../assets/css/installation_maintenance.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 </head>
 
 <body class="body">
     <header class="header">
-        <a class="header__logo" href="main.html"><img src="/svg/logo.svg" /></a>
+        <a class="header__logo" href="main.html"><img src="../assets/img/icons/logo.svg" /></a>
         <nav class="header__links">
-            <a class="header__link" href="about_us.html">О нас</a>
-            <a class="header__link" href="catalog.html">Каталог</a>
-            <a class="header__link" href="installation_maintenance.html">Монтаж и обслуживание</a>
-            <a class="header__link" href="working.html">Как мы работаем</a>
-            <a class="header__link" href="projects.html">Наши проекты</a>
-            <a class="header__link" href="contacts.html">Контакты</a>
+            <a class="header__link link-green" href="about_us.html">О нас</a>
+            <a class="header__link link-green" href="catalog/catalog.html">Каталог</a>
+            <a class="header__link link-green" href="installation_maintenance.html">Монтаж и обслуживание</a>
+            <a class="header__link link-green" href="working.html">Как мы работаем</a>
+            <a class="header__link link-green" href="projects.html">Наши проекты</a>
+            <a class="header__link link-green" href="contacts.html">Контакты</a>
         </nav>
         <div class="header__btns">
             <button class="header__menu-btn"></button>
-            <button class="header__phone-btn">
+            <button class="header__phone-btn btn-dark-green">
                 <div class="header__phone-btn-icon"></div>
                 <span class="header__phone-btn-text">Заказать звонок</span>
             </button>
         </div>
-        <img src="/svg/vectors/vector_1.svg" class="header__vector-desktop" alt="Вектор">
+        <img src="../assets/img/icons/vectors/vector_1.svg" class="header__vector-desktop" alt="Вектор">
     </header>
 
     <main class="wrapper">
@@ -34,18 +35,18 @@
             <div class="wrapper__menu-links">
                 <nav class="wrapper__menu-header-links">
                     <a class="wrapper__menu-link" href="about_us.html">О нас</a>
-                    <a class="wrapper__menu-link" href="catalog.html">Каталог</a>
+                    <a class="wrapper__menu-link" href="catalog/catalog.html">Каталог</a>
                     <a class="wrapper__menu-link" href="installation_maintenance.html">Монтаж и обслуживание</a>
                     <a class="wrapper__menu-link" href="working.html">Как мы работаем</a>
                     <a class="wrapper__menu-link" href="projects.html">Наши проекты</a>
                     <a class="wrapper__menu-link" href="contacts.html">Контакты</a>
                 </nav>
                 <nav class="wrapper__menu-footer-links">
-                    <a class="wrapper__menu-link" href="">Лицензии</a>
-                    <a class="wrapper__menu-link" href="">Сертификаты</a>
-                    <a class="wrapper__menu-link" href="">Вакансии</a>
-                    <a class="wrapper__menu-link" href="">Презентация</a>
-                    <a class="wrapper__menu-link" href="">Прайс-лист</a>
+                    <a class="wrapper__menu-link" href="#">Лицензии</a>
+                    <a class="wrapper__menu-link" href="#">Сертификаты</a>
+                    <a class="wrapper__menu-link" href="#">Вакансии</a>
+                    <a class="wrapper__menu-link" href="#">Презентация</a>
+                    <a class="wrapper__menu-link" href="#">Прайс-лист</a>
                 </nav>
             </div>
             <div class="wrapper__menu-footer">
@@ -54,19 +55,19 @@
                     <span class="wrapper__menu-name"><span>Москва</span><span> и Московская область</span></span>
                 </div>
                 <p class="wrapper__menu-rights">2010-2024 © Все права защищены</p>
-                <img src="/svg/vectors/vector_5.svg" class="wrapper__menu-vector-1" alt="Вектор">
-                <img src="/svg/vectors/vector_6.svg" class="wrapper__menu-vector-2" alt="Вектор">
+                <img src="../assets/img/icons/vectors/vector_5.svg" class="wrapper__menu-vector-1" alt="Вектор">
+                <img src="../assets/img/icons/vectors/vector_6.svg" class="wrapper__menu-vector-2" alt="Вектор">
             </div>
         </div>
         <div class="info">
             <div class="info__mobile-block">
                 <div class="info__text">
                     <p class="info__title">Монтаж и&nbsp;обслуживание</p>
-                    <p class="info__description">Инженерно-монтажный отдел компании <span class="green-text">АСБ</span>
+                    <p class="info__description">Инженерно-монтажный отдел компании <span class="text-green">АСБ</span>
                         предлагает Вам услуги по&nbsp;монтажу, обслуживанию и&nbsp;сопровождению видеонаблюдения
                         и&nbsp;других систем безопасности.</p>
                 </div>
-                <img src="/svg/man/man_installation.svg" class="info__picture" alt="">
+                <img src="../assets/img/icons/man/man_installation.svg" class="info__picture" alt="">
             </div>
             <section class="info__section">
                 <p class="info__section-title">Мы&nbsp;работаем с&nbsp;разными клиентами:</p>
@@ -89,14 +90,172 @@
                     </div>
                 </div>
             </section>
-            <button class="info__btn">Оставить заявку</button>
+            <button class="info__btn btn-green" id="btn_open-application">Оставить заявку</button>
         </div>
         <div class="pictures">
-            <img src="/pictures/camera_2.png" class="pictures__camera" alt="Камера видеонаблюдения, висит в саду">
-            <img src="/svg/man/man_installation.svg" class="pictures__man"
+            <img src="../assets/img/camera_2.png" class="pictures__camera" alt="Камера видеонаблюдения, висит в саду">
+            <img src="../assets/img/icons/man/man_installation.svg" class="pictures__man"
                 alt="Человек, который устанавливает и обслуживает системы видеонаблюдения и т.п. Забирается вверх по лестнице.">
         </div>
     </main>
+
+    <div class="application" id="application">
+        <form class="application__modal" autocomplete="off" novalidate>
+            <header class="application__header">
+                <img src="../assets/img/icons/logo_short.svg" class="application__logo" alt="Логотип компании АСБ">
+                <div class="application__block">
+                    <p>Заявка <span class="text-green">&#8470;&nbsp;126325780</span></p>
+                    <p>на&nbsp;монтаж систем безопасности от&nbsp;12.08.2024г.</p>
+                </div>
+                <div class="application__icons">
+                    <div class="application__icon cross-icon"></div>
+                    <div class="application__icon download-icon"></div>
+                </div>
+            </header>
+            <main class="application__content scroll-block">
+                <div class="application__field application__field-list">
+                    <label class="application__field-name"><span>Выбор системы</span></label>
+                    <div class="application__list">
+                        <div class="application__form application__list-item">
+                            <span>Системы видеонаблюдения</span>
+                        </div>
+                        <div class="application__form application__list-item">
+                            <span>Системы контроля доступа</span>
+                        </div>
+                        <div class="application__form application__list-item">
+                            <span>Охранно-пожарное оборудование</span>
+                        </div>
+                        <div class="application__form application__list-item">
+                            <span>Сигнализации &laquo;Sapsan&raquo;</span>
+                        </div>
+                        <div class="application__form application__list-item">
+                            <span>Источники питания</span>
+                        </div>
+                        <div class="application__form application__list-item">
+                            <span>Комплекты оборудования</span>
+                        </div>
+                    </div>
+                    <img src="../assets/img/icons/checkmark_2.svg"
+                        class="application__validation-icon validation-icon_none" alt="Галочка валидации">
+                </div>
+                <div class="application__field">
+                    <label for="phone" class="application__field-name"><span>Телефон</span></label>
+                    <input type="tel" id="phone" class="application__form application__input"
+                        placeholder="Контактный телефон">
+                    <img src="../assets/img/icons/checkmark_2.svg"
+                        class="application__validation-icon validation-icon_none" alt="Галочка валидации">
+                </div>
+                <div class="application__field">
+                    <label for="company" class="application__field-name"><span>Компания (ФИО)</span></label>
+                    <input type="text" id="company" class="application__form application__input"
+                        placeholder="Название компании/Объекта">
+                    <img src="../assets/img/icons/checkmark_2.svg"
+                        class="application__validation-icon validation-icon_none" alt="Галочка валидации">
+                </div>
+                <div class="application__field">
+                    <label for="human" class="application__field-name"><span>Контактное лицо</span></label>
+                    <input type="text" id="human" class="application__form application__input"
+                        placeholder="Контактное лицо">
+                    <img src="../assets/img/icons/checkmark_2.svg"
+                        class="application__validation-icon validation-icon_none" alt="Галочка валидации">
+                </div>
+                <div class="application__field">
+                    <label for="comment"
+                        class="application__field-name application__field-textarea"><span>Комментарий</span></label>
+                    <textarea name="text" id="comment" class="application__form application__textarea scroll-block"
+                        placeholder="Ваш комментарий"></textarea>
+                    <img src="../assets/img/icons/checkmark_2.svg" class="application__validation-icon icon_none"
+                        alt="Галочка валидации">
+                </div>
+            </main>
+            <footer class="application__footer">
+                <aside class="application__footnotes">
+                    <div class="application__license">
+                        <span class="application__license-title">Лицензия:</span>
+                        <div class="application__license-number">
+                            <img src="../assets/img/icons/document.svg" alt="Сертифицированный документ">
+                            <span>МЧС России &#8470;&nbsp;77-Б/02699 от&nbsp;01.09.2010</span>
+                        </div>
+                    </div>
+                    <div class="application__guarantee">
+                        <div class="application__guarantee-text">
+                            <img src="../assets/img/icons/guarantee.svg" alt="Знак гарантии">
+                            <span>Гарантия на оборудование и выполненные работы:</span>
+                        </div>
+                        <span class="application__guarantee-year">1 год</span>
+                    </div>
+                </aside>
+                <button class="btn-application application__btn" id="btn_open-info-application">Отправить</button>
+            </footer>
+        </form>
+    </div>
+
+    <div class="application" id="new-application">
+        <section class="application__modal application__modal-info">
+            <header class="application__header">
+                <img src="../assets/img/icons/logo_short.svg" class="application__logo" alt="Логотип компании АСБ">
+                <div class="application__block">
+                    <p>Заявка <span class="text-green">&#8470;&nbsp;126325780</span></p>
+                    <p>на&nbsp;монтаж систем безопасности от&nbsp;12.08.2024г.</p>
+                </div>
+                <div class="application__icons">
+                    <div class="application__icon cross-icon"></div>
+                    <div class="application__icon download-icon"></div>
+                </div>
+            </header>
+            <main class="application__content application__info-content scroll-block">
+                <div class="application__title"><span>Ваша заявка</span></div>
+                <div class="application__info">
+                    <div class="application__info-blocks">
+                        <div class="application__info-block">
+                            <div class="application__info-block-title">
+                                <span>&#8470;&nbsp;136325780</span>
+                                <span class="application__info-block-time">от 12:20 (GMT+3) 12.08.2024г. </span>
+                            </div>
+                            <div class="application__info-block-notes">
+                                <span id="new-company"></span>
+                                <span id="new-system"></span>
+                                <span id="new-human"></span>
+                                <span id="new-phone"></span>
+                                <span id="new-comment"></span>
+                            </div>
+                        </div>
+                        <div class="application__info-block application__info-block-texts">
+                            <p class="application__info-block-text">Спасибо за&nbsp;обращение!
+                                Наши менеджеры свяжутся с&nbsp;вами по&nbsp;указанному телефону в&nbsp;ближайшее время
+                                для
+                                уточнения деталей сформированной заявки.</p>
+                            <p class="application__info-block-text">ООО &laquo;Автономные Системы Безопасности&raquo;
+                                Технический директор, Брусенцов А.А.</p>
+                        </div>
+                    </div>
+                    <div class="application__download">
+                        <span>Вы&nbsp;можете скачать данную заявку, нажав на&nbsp;кнопку</span>
+                        <img src="../assets/img/icons/download.svg" alt="Кнопка скачивания">
+                    </div>
+                </div>
+            </main>
+            <footer class="application__footer">
+                <aside class="application__footnotes">
+                    <div class="application__license">
+                        <span class="application__license-title">Лицензия:</span>
+                        <div class="application__license-number">
+                            <img src="../assets/img/icons/document.svg" alt="Сертифицированный документ">
+                            <span>МЧС России &#8470;&nbsp;77-Б/02699 от&nbsp;01.09.2010</span>
+                        </div>
+                    </div>
+                    <div class="application__guarantee">
+                        <div class="application__guarantee-text">
+                            <img src="../assets/img/icons/guarantee.svg" alt="Знак гарантии">
+                            <span>Гарантия на оборудование и выполненные работы:</span>
+                        </div>
+                        <span class="application__guarantee-year">1 год</span>
+                    </div>
+                </aside>
+                <button class="btn-application application__btn" id="btn_close-info-application">ОК</button>
+            </footer>
+        </section>
+    </div>
 
     <footer class="footer">
         <div class="footer__info">
@@ -108,38 +267,40 @@
         </div>
         <div class="footer__details">
             <nav class="footer__links">
-                <a class="footer__link" href="">Лицензии</a>
-                <a class="footer__link" href="">Сертификаты</a>
-                <a class="footer__link" href="">Вакансии</a>
-                <a class="footer__link" href="">Презентация</a>
-                <a class="footer__link" href="">Прайс-лист</a>
+                <a class="footer__link" href="#">Лицензии</a>
+                <a class="footer__link" href="#">Сертификаты</a>
+                <a class="footer__link" href="#">Вакансии</a>
+                <a class="footer__link" href="#">Презентация</a>
+                <a class="footer__link" href="#">Прайс-лист</a>
             </nav>
             <div class="footer__rights">
                 <p class="footer__rights-text">2010-2024 © Все права защищены</p>
                 <a class="footer__telegram" href="https://t.me/asb_video">
-                    <img class="footer__telegram-icon" src="/svg/telegram.svg" alt="Телеграм">
+                    <img class="footer__telegram-icon" src="../assets/img/icons/telegram.svg" alt="Телеграм">
                     <p class="footer__telegram-text">Мы в Telegram</p>
                 </a>
             </div>
         </div>
         <div class="footer__contacts">
             <p class="footer__phone">+7 (495) 225-60-61</p>
-            <button class="footer__btn">Оформить заказ</button>
+            <button class="footer__btn btn-green">Оформить заказ</button>
         </div>
         <div class="footer__rights-bottom">
             <p class="footer__rights-bottom-text">2010-2024 © Все права защищены</p>
             <a class="footer__telegram-bottom" href="https://t.me/asb_video">
-                <img class="footer__telegram-icon" src="/svg/telegram.svg" alt="Телеграм">
+                <img class="footer__telegram-icon" src="../assets/img/icons/telegram.svg" alt="Телеграм">
                 <p class="footer__telegram-text">Мы в Telegram</p>
             </a>
         </div>
-        <img src="/svg/vectors/vector_2.svg" class="footer__vector-desktop" alt="Вектор">
-        <img src="/svg/vectors/vector_4.svg" class="footer__vector-mobile-1" alt="Вектор">
-        <img src="/svg/vectors/vector_3.svg" class="footer__vector-mobile-2" alt="Вектор">
+        <img src="../assets/img/icons/vectors/vector_2.svg" class="footer__vector-desktop" alt="Вектор">
+        <img src="../assets/img/icons/vectors/vector_4.svg" class="footer__vector-mobile-1" alt="Вектор">
+        <img src="../assets/img/icons/vectors/vector_3.svg" class="footer__vector-mobile-2" alt="Вектор">
     </footer>
 
-    <script src="../js/header.js"></script>
-    <script src="../js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/application.js"></script>
 </body>
 
 </html>

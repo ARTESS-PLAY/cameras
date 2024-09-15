@@ -1,12 +1,12 @@
-@import url(palette.css);
-@import url(/fonts/index.css);
+@import url('./palette.css');
+@import url('../fonts/index.css');
 
 * {
     padding: 0;
     margin: 0;
     border: 0;
     z-index: 2;
-    font-family: "Mulish";
+    font-family: 'Mulish';
 }
 
 *,
@@ -68,6 +68,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover {
@@ -82,6 +83,116 @@ img {
     vertical-align: top;
 }
 
-.green-text {
+.text-green {
     color: var(--green);
+}
+
+.btn-green {
+    border-radius: 16px;
+    background-color: var(--light-green);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 24px;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background-color: var(--light-green-2);
+}
+
+.btn-dark-green {
+    background-color: var(--green);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    color: var(--white);
+}
+
+.btn-dark-green:hover,
+.btn-dark-green:active,
+.btn-dark-green:focus {
+    background-color: var(--green-on);
+}
+
+.bg-validated {
+    background-color: var(--green-card) !important;
+}
+
+.no-scroll {
+    overflow: clip;
+}
+
+.display-none {
+    display: none;
+}
+
+.btn-application {
+    background-color: var(--btn-number);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.btn-application:hover,
+.btn-application:active,
+.btn-application:focus {
+    background-color: var(--green-2);
+}
+
+.link-green {
+    transition: 0.3s;
+}
+
+.link-green:hover,
+.link-green:active,
+.link-green:focus {
+    color: var(--green);
+}
+
+.scroll-block {
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.scroll-block::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll-block::-webkit-scrollbar-track {
+    background-color: var(--light-grey-3);
+    border-radius: 4px;
+}
+
+.scroll-block::-webkit-scrollbar-thumb {
+    background-color: var(--enter);
+    border-radius: 4px;
+}
+
+.wide-scroll-block::-webkit-scrollbar {
+    width: 20px;
+}
+
+.page_404 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.page_404 h1 {
+    font-size: 120px;
 }

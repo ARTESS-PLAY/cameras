@@ -7,4 +7,4 @@
  */
 
 require_once __DIR__ . '/custom-types.php';
-require_once __DIR__ . '/field-projects-slider.php';
+require_once __DIR__ . '/woocommerce-config.php';

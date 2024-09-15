@@ -1,4 +1,4 @@
-@import url(body.css);
+@import url('body.css');
 
 .wrapper {
     display: flex;
@@ -204,7 +204,6 @@
 }
 
 @media (max-width: 1023.89px) {
-
     .wrapper .info {
         padding-top: 30px;
     }
@@ -278,7 +277,6 @@
 }
 
 @media (max-height: 1019.89px) {
-
     .wrapper .info,
     .wrapper .slider {
         height: fit-content;

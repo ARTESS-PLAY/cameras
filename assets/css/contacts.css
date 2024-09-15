@@ -1,4 +1,4 @@
-@import url(body.css);
+@import url('body.css');
 
 .wrapper {
     display: flex;
@@ -114,7 +114,7 @@
     line-height: 22px;
 }
 
-.wrapper .info .note .note__text .green-text {
+.wrapper .info .note .note__text .text-green {
     font-weight: 700;
     background-color: var(--white);
     border-radius: 2px;

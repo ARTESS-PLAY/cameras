@@ -1,10 +1,12 @@
 :root {
     --black: #212325;
+    --deep-black: #000000;
     --green: #137332;
     --green-on: #1EB251;
     --light-green: #7DBA28;
     --white: #FFFFFF;
     --grey: #212325CC;
+    --grey-2: #a1a1a1;
     --green-2: #239713;
     --green-2-on: #3EC30D;
     --light-green-2: #A1DF4A;
@@ -15,11 +17,26 @@
     --delete-2: #94D67B;
     --btn-number: #54B731;
     --menu-links: #0C5A26;
+    --green-track: #bce8c3;
+    --green-thumb: #82c58c;
     --blue: #398CC8;
+    --blue-2: #1e8bb2;
     --blue-on: #36709a;
+    --light-blue: #d9e4e8;
     --light-grey: #ebebeb;
     --light-grey-2: #cbd4d7;
+    --light-grey-3: #d9d9d9;
+    --light-grey-4: #f4f7f9;
+    --light-grey-5: #f4f7f9;
     --dark-grey: #202028;
     --box-shadow-1: 0 3px 24px 0 #21232540;
     --box-shadow-2: 0 4px 4px 0 #00000040;
+    --box-shadow-3: 0px 3px 6px 0px #20202826;
+    --translucent-black: rgba(0, 0, 0, 0.45);
+    --translucent-grey: #a8b8c71a;
+    --translucent-grey-2: #21232580;
+    --orange: #e28c17;
+    --pink: #b21e66;
+    --light-red: #fae8e8;
+    --red: #cc3d4d;
 }

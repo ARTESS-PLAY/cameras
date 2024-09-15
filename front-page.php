@@ -42,9 +42,10 @@ get_header(); ?>
 <div class="pictures">
 	<div class="pictures__camera" style="background-image: url(<?php the_field('main_img_bg'); ?>);"></div>
 	<div class="pictures__man">
-		<img src="<?php the_field('main_img'); ?>"
-			alt="">
+		<img src="<?php the_field('main_img'); ?>" alt="">
 	</div>
 </div>
-</main>
+
+<?php get_template_part('template-parts/modals/modal', 'main'); ?>
+
 <?php get_footer(); ?>

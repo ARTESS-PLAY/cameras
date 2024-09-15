@@ -1,0 +1,827 @@
+.application {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--translucent-black);
+}
+
+.application_open {
+    display: block;
+}
+
+.application .application__modal {
+    width: 40%;
+    max-height: 90%;
+    max-width: 50%;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-3);
+    border-radius: 16px;
+    padding: 20px 20px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.application .application__modal-info {
+    height: 824px;
+}
+
+.application .application__header {
+    display: flex;
+    gap: 38px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.application .application__logo {
+    height: 56px;
+    width: auto;
+}
+
+.application .application__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.application .application__block p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.application .application__block .text-green {
+    font-weight: 800;
+}
+
+.application .application__icons {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.application .application__icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.2s;
+}
+
+.application .cross-icon {
+    background-image: url("../img/icons/cross.svg");
+}
+
+.application .cross-icon:hover {
+    background-image: url("../img/icons/cross_active.svg");
+}
+
+.application .download-icon {
+    background-image: url("../img/icons/download.svg");
+}
+
+.application .download-icon:hover {
+    background-image: url("../img/icons/download_active.svg");
+}
+
+.application .application__content {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1
+}
+
+.application .application__info-content {
+    flex-direction: row;
+    gap: 30px;
+}
+
+.application .application__field {
+    display: flex;
+}
+
+.application .application__field-name {
+    width: 108px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.application .application__field-name span {
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 16px;
+    cursor: text;
+}
+
+.application .application__field-textarea {
+    height: fit-content;
+}
+
+.application .application__form {
+    width: 100%;
+    border: 2px solid var(--green);
+    background-color: var(--translucent-grey);
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 16px;
+    margin-right: 70px;
+    transition: 0.2s;
+}
+
+.application .application__form::placeholder {
+    color: var(--translucent-grey-2);
+}
+
+.application .application__input {
+    height: 50px;
+}
+
+.application .application__textarea {
+    resize: none;
+    height: 120px;
+}
+
+.application .application__textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.application .application__list {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+
+.application .application__list-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    border-top: none;
+}
+
+.application .application__list-item_first {
+    border-radius: 8px 8px 0 0;
+    border-top: 2px solid var(--green);
+}
+
+.application .application__list-item_last {
+    border-radius: 0 0 8px 8px;
+}
+
+.application .application__list-item:hover {
+    background-color: var(--light-grey);
+}
+
+.application .application__validation-icon {
+    align-self: flex-start;
+    height: 20px;
+    width: auto;
+    margin-top: 15px;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.application .validation-icon_none,
+.application .icon_none {
+    opacity: 0;
+}
+
+.application .application__footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    padding-top: 24px;
+}
+
+.application .footer-amount {
+    flex-direction: column;
+    gap: 5px;
+    justify-content: unset;
+    align-items: unset;
+    padding-top: 5px;
+}
+
+.application .application__footer-block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.application .application__footnotes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.application .application__license {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 0 0 6px;
+    flex-wrap: nowrap;
+}
+
+.application .application__license-title,
+.application .application__license-number span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.application .application__license-number span {
+    color: var(--red);
+}
+
+.application .application__license-number,
+.application .application__guarantee-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.application .application__license-number {
+    background-color: var(--light-red);
+}
+
+.application .application__guarantee {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.application .application__guarantee-text {
+    background-color: var(--green-card);
+}
+
+.application .application__guarantee-text span {
+    color: var(--green-2);
+}
+
+.application .application__guarantee-text span,
+.application .application__guarantee-year {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.application .application__guarantee-year,
+.application .application__license-title {
+    text-wrap: nowrap;
+}
+
+.application .application__btn {
+    width: 200px;
+    padding: 14px 30px;
+}
+
+.application .application__btn_wide {
+    line-height: 20px;
+}
+
+.application .application__title {
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--deep-black);
+    width: fit-content;
+}
+
+.application .application__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    padding-right: 100px;
+}
+
+.application .application__info-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.application .application__info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.application .application__info-block-texts {
+    gap: 30px;
+}
+
+.application .application__info-block-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.application .application__info-block-title span {
+    color: var(--deep-black);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.application .application__info-block-time {
+    font-size: 16px !important;
+    line-height: 22px !important;
+}
+
+.application .application__info-block-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.application .application__info-block-notes span {
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--grey);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.application #new-system,
+.application #new-human {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.application #new-comment {
+    padding: 8px 0;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.application .application__info-block-text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.application .application__download {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.application .application__download span {
+    font-style: italic;
+    line-height: 22px;
+    color: var(--translucent-grey-2);
+}
+
+.application .application__table {
+    display: grid;
+    grid-template-columns: 3% auto 8% 9% 9% 12%;
+    gap: 5px 12px;
+}
+
+.application .application__table span,
+.application .application__footer-amount-block span {
+    color: var(--deep-black);
+}
+
+.application .application__table-head {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    white-space: nowrap;
+    padding: 10px 0 20px 0;
+}
+
+.application .application__table-tag {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.application .application__table-title,
+.application .application__table-cost {
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.application .application__table-title {
+    white-space: nowrap;
+}
+
+.application .application__table-elem {
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.application .application__table-num {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.application .application__table-item-name {
+    white-space: wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.application .application__table-total {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.application .application__table-total-cost,
+.application__footer-amount-title {
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.application__footer-amount-price {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 42px;
+    text-align: right;
+}
+
+.application .amount-col {
+    text-align: right;
+}
+
+.application .application__footer-amount-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 4px 0 8px 10px;
+}
+
+@media (max-width: 1919.89px) {
+    .application .application__modal {
+        max-width: none;
+        width: 60%;
+    }
+}
+
+@media (max-width: 1439.89px) {
+    .application .application__modal {
+        width: 70%;
+    }
+
+    .application .application__info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1023.89px) {
+    .application .application__modal {
+        width: 80%;
+    }
+
+    .application .application__btn {
+        width: 30%;
+    }
+
+    .application .application__footer {
+        gap: 12px;
+    }
+
+    .application .application__footnotes {
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+
+    .application .application__info-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .application .application__table {
+        grid-template-columns: 3% auto 10% 9% 9% 15%;
+    }
+}
+
+@media (max-width: 767.89px) {
+    .application .application__modal {
+        padding: 20px;
+    }
+
+    .application .application__header {
+        gap: 20px;
+    }
+
+    .application .application__logo {
+        height: 50px;
+    }
+
+    .application .application__block p,
+    .application .application__info-block-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .application .application__icon,
+    .application__download img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .application .application__content {
+        margin-top: 36px;
+    }
+
+    .application .application__field-name,
+    .application .application__form,
+    .application .application__list {
+        margin: 0;
+    }
+
+    .application .application__field-name {
+        width: 100px;
+    }
+
+    .application__info-block-title {
+        gap: 4px !important;
+    }
+
+    .application__info-block-title span {
+        font-size: 16px !important;
+        line-height: 22px !important;
+    }
+
+    .application .application__field-name span,
+    .application .application__form {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .application .application__field {
+        gap: 8px;
+    }
+
+    .application .application__list-item {
+        min-height: 44px;
+        height: fit-content;
+        padding: 8px 12px;
+    }
+
+    .application .application__footer {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 16px;
+    }
+
+    .application .application__footer-block {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .application .application__btn {
+        width: 100%;
+        min-height: 40px;
+        padding: 0;
+    }
+
+    .application .application__license-title,
+    .application .application__license-number span,
+    .application .application__guarantee-text span,
+    .application .application__guarantee-year {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .application .application__table {
+        grid-template-columns: 5% 28% 13% 8% 15% auto;
+        gap: 4px 6px;
+    }
+
+    .application .application__table-head {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 10px 0 10px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .application .application__table-tag,
+    .application .application__table-title,
+    .application .application__table-cost {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .application .application__table-elem {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .application .application__table-num {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .application .application__table-total {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .application .application__table-total-cost,
+    .application__footer-amount-title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .application__footer-amount-price {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .application .application__footer-amount-block {
+        padding: 0;
+    }
+
+    .application .footer-amount {
+        gap: 10px;
+    }
+
+    .application .application__table-elem {
+        white-space: nowrap;
+        word-break: unset;
+        overflow-wrap: unset;
+        overflow: visible hidden;
+    }
+
+    .application .application__table-elem::-webkit-scrollbar {
+        display: none;
+    }
+
+    .application .application__table-elem {
+        scrollbar-width: none;
+    }
+
+    .application .application__modal-calculation {
+        width: 90%;
+    }
+
+    .application .application__calculation-content::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .application .application__calculation-content {
+        padding-right: 4px;
+    }
+}
+
+@media (max-width: 424.89px) {
+    .application .application__modal {
+        padding: 12px;
+    }
+
+    .application .application__header {
+        gap: 12px;
+    }
+
+    .application .application__logo {
+        height: 36px;
+    }
+
+    .application .application__block p,
+    .application .application__info-block-title span,
+    .application .application__info-block-time,
+    .application__info-block-notes span,
+    .application__info-block-text,
+    .application .application__download span {
+        font-size: 12px !important;
+        line-height: 16px !important;
+    }
+
+    .application .application__info-blocks {
+        gap: 20px;
+    }
+
+    .application .application__info-block-texts {
+        gap: 12px;
+    }
+
+    .application .application__icons {
+        gap: 4px;
+    }
+
+    .application .application__icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .application .application__content {
+        margin-top: 20px;
+    }
+
+    .application .application__field-name {
+        width: 80px;
+        height: 40px;
+    }
+
+    .application .application__field-name span,
+    .application .application__form {
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+    .application .application__form {
+        height: fit-content;
+        min-height: 40px;
+        padding: 4px 8px;
+    }
+
+    .application__field-textarea {
+        height: fit-content !important;
+        padding-top: 6px !important;
+    }
+
+    .application .application__textarea {
+        height: 100px;
+    }
+
+    .application .application__list-item span {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .application .application__validation-icon {
+        height: 16px;
+        margin-top: 12px;
+    }
+
+    .application .application__license-title,
+    .application .application__license-number span,
+    .application .application__guarantee-text span,
+    .application .application__guarantee-year {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .application .application__modal-calculation {
+        width: 95%;
+    }
+}
+
+@media (max-width: 374.89px) {
+    .application .application__table {
+        grid-template-columns: 5% 30% 13% 10% 15% auto;
+        gap: 4px;
+    }
+
+    .application .application__license-title,
+    .application .application__license-number span,
+    .application .application__guarantee-text span,
+    .application .application__guarantee-year,
+    .application .application__table-head,
+    .application .application__table-elem,
+    .application .application__table-num,
+    .application .application__table-total,
+    .application .application__table-total-cost,
+    .application__footer-amount-title {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .application .application__table-tag,
+    .application .application__table-title,
+    .application .application__table-cost {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .application__footer-amount-price {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

@@ -1,38 +1,77 @@
-document.addEventListener('DOMContentLoaded', () => {
+const setupCalculator = (inputId, calculatorId, maxDigits, placeholder) => {
+    const calcInput = document.getElementById(inputId);
+    const calculator = document.getElementById(calculatorId);
+    const numberButtons = calculator.querySelectorAll('.info__calculator-btn-number');
+    const deleteButton = calculator.querySelector('.info__calculator-btn-delete');
+    const enterButton = calculator.querySelector('.info__calculator-btn-enter');
 
-    const setupCalculator = (inputId, calculatorId) => {
+    console.log(calcInput);
 
-        const calcInput = document.getElementById(inputId);
-        const calculator = document.getElementById(calculatorId);
-        const numberButtons = calculator.querySelectorAll('.info__calculator-btn-number');
-        const deleteButton = calculator.querySelector('.info__calculator-btn-delete');
-        const enterButton = calculator.querySelector('.info__calculator-btn-enter');
+    const setPlaceholder = () => {
+        if (calcInput.value === '') {
+            calcInput.value = placeholder;
+        }
+    };
 
-        calcInput.addEventListener('click', () => {
-            calculator.classList.remove('info__calculator-closed');
-        });
+    const removePlaceholder = () => {
+        if (calcInput.value === placeholder) {
+            calcInput.value = '';
+        }
+    };
 
-        numberButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                calcInput.value = calcInput.value === "0" ? button.textContent : calcInput.value + button.textContent;
-            });
-        });
+    const limitDigits = (inputValue) => {
+        return inputValue.length < maxDigits;
+    };
 
-        deleteButton.addEventListener('click', () => {
-            calcInput.value = calcInput.value.slice(0, -1);
-        });
+    calcInput.addEventListener('click', () => {
+        removePlaceholder();
+        calculator.classList.remove('info__calculator-closed');
+    });
 
-        enterButton.addEventListener('click', () => {
-            calculator.classList.add('info__calculator-closed');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!calcInput.contains(event.target) && !calculator.contains(event.target)) {
-                calculator.classList.add('info__calculator-closed');
+    numberButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            removePlaceholder();
+            if (limitDigits(calcInput.value)) {
+                calcInput.value =
+                    calcInput.value === '0'
+                        ? button.textContent
+                        : calcInput.value + button.textContent;
+                lue = button.textContent;
             }
         });
-    }
+    });
 
-    setupCalculator('calcInput1', 'calculator1');
-    setupCalculator('calcInput2', 'calculator2');
+    deleteButton.addEventListener('click', () => {
+        calcInput.value = calcInput.value.slice(0, -1);
+        if (calcInput.value === '') {
+            setPlaceholder();
+        }
+    });
+
+    enterButton.addEventListener('click', () => {
+        setPlaceholder();
+        calculator.classList.add('info__calculator-closed');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!calcInput.contains(event.target) && !calculator.contains(event.target)) {
+            calculator.classList.add('info__calculator-closed');
+            setPlaceholder();
+        }
+    });
+
+    setPlaceholder();
+};
+
+const allowedKeys = ['ArrowLeft', 'ArrowRight'];
+
+document.querySelectorAll('.info__input').forEach((input) => {
+    input.addEventListener('keydown', (event) => {
+        if (!allowedKeys.includes(event.key)) {
+            event.preventDefault();
+        }
+    });
 });
+
+setupCalculator('calcInput1', 'calculator1', 2, '--');
+setupCalculator('calcInput2', 'calculator2', 3, '---');

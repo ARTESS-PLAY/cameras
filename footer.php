@@ -7,6 +7,8 @@
  */
 ?>
 
+</main>
+
 <footer class="footer">
     <div class="footer__info">
         <div class="footer__legal-name"><span><?php the_field('footer_name', 'options'); ?></span></div>
@@ -38,7 +40,7 @@
     </div>
     <div class="footer__contacts">
         <p class="footer__phone"><?php the_field('contacts_phone', 'options'); ?></p>
-        <button class="footer__btn"><?php echo esc_html__('Оформить заказ', 'asbvideo') ?></button>
+        <button class="footer__btn btn-green"><?php echo esc_html__('Оформить заказ', 'asbvideo') ?></button>
     </div>
     <div class="footer__rights-bottom">
         <p class="footer__rights-bottom-text">2010-<?php echo current_time('Y'); ?> © <?php echo esc_html__('Все права защищены', 'asbvideo') ?> </p>
