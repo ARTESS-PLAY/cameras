@@ -11,7 +11,7 @@ global $product;
 
 $image =  wp_get_attachment_image_src( $product->get_id(), 'thumbnail' ) ? wp_get_attachment_image_src( $product->get_id(), 'thumbnail' )[0]  : wc_placeholder_img_src();
 ?>
-<a href="products/camera.html">
+<a href="<?php echo $product->get_permalink();?>">
     <article class="product-card">
         <img class="product-card__img" src="<?php echo $image?>"
             alt="<?php echo $product->get_name()?>">
