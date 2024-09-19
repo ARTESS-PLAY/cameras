@@ -57,6 +57,15 @@ function asbvideo_scripts()
 		wp_enqueue_style('asb-video-projects-style', get_template_directory_uri() . '/assets/css/projects.css');
 		wp_enqueue_script('asb-video-projects-script', get_template_directory_uri() . '/assets/js/projects_slider.js', array('asb-video-swiper-script'), null, true);
 	}
+
+	if( is_singular( 'product' ) ){
+		wp_enqueue_style('asb-video-camera-style', get_template_directory_uri() . '/assets/css/camera.css');
+    }
+
+	if( is_product_category() ){
+		wp_enqueue_style('asb-video-tvi-style', get_template_directory_uri() . '/assets/css/tvi.css');
+		wp_enqueue_style('asb-video-video_control-style', get_template_directory_uri() . '/assets/css/video_control.css');
+    }
 }
 
 /**

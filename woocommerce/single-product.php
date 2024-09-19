@@ -11,6 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
+	<?php wc_get_template_part( 'catalog/catalog', 'links' ); ?>
+
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 

@@ -1,4 +1,4 @@
-@import url("catalog_general.css");
+@import url('catalog_general.css');
 
 .wrapper .catalog {
     gap: 20px;
@@ -26,6 +26,7 @@
     background-color: var(--light-grey-4);
     transition: 0.3s all;
     cursor: pointer;
+    height: 100%;
 }
 
 .wrapper .catalog .catalog__article:hover {

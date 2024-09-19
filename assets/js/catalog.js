@@ -11,10 +11,10 @@ infoLinks.forEach((link) => {
         if (linkPath.includes(p)) {
             flag = true;
         }
-    })
+    });
 
     if (flag) {
-        link.classList.add('info__link_active');
+        // link.classList.add('info__link_active');
     }
 });
 
@@ -24,4 +24,4 @@ breadcrumbsLinks.forEach((link) => {
     if (linkPath === lastPath) {
         link.classList.add('breadcrumbs__link_active');
     }
-})
+});
