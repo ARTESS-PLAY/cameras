@@ -35,9 +35,11 @@ function asbvideo_scripts()
 		wp_enqueue_script('asb-video-main-script', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
 		wp_enqueue_script('asb-video-main_application-script', get_template_directory_uri() . '/assets/js/main_application.js', array(), null, true);
 	}
+	
 	if (is_page_template('page-about-us.php')) {
 		wp_enqueue_style('asb-video-about-style', get_template_directory_uri() . '/assets/css/about_us.css');
 	}
+
 	if (is_page_template('page-maintenance.php')) {
 		wp_enqueue_style('asb-video-maintenance-style', get_template_directory_uri() . '/assets/css/installation_maintenance.css');
 		wp_enqueue_style('asb-video-maintenance-style', get_template_directory_uri() . '/assets/js/application.css');
@@ -47,15 +49,23 @@ function asbvideo_scripts()
 
 		wp_enqueue_script('asb-video-application-script', get_template_directory_uri() . '/assets/js/application.js', array('asb-video-nonify'), null, true);
 	}
+
 	if (is_page_template('page-working.php')) {
 		wp_enqueue_style('asb-video-working-style', get_template_directory_uri() . '/assets/css/working.css');
 	}
+
 	if (is_page_template('page-contacts.php')) {
 		wp_enqueue_style('asb-video-contacts-style', get_template_directory_uri() . '/assets/css/contacts.css');
 	}
+
 	if (is_page_template('page-projects.php')) {
 		wp_enqueue_style('asb-video-projects-style', get_template_directory_uri() . '/assets/css/projects.css');
 		wp_enqueue_script('asb-video-projects-script', get_template_directory_uri() . '/assets/js/projects_slider.js', array('asb-video-swiper-script'), null, true);
+	}
+
+	if (is_page_template('page-catalog.php')) {
+		wp_enqueue_style('asb-video-catalog-style', get_template_directory_uri() . '/assets/css/catalog.css');
+		wp_enqueue_script('asb-video-catalog-slider-script', get_template_directory_uri() . '/assets/js/catalog_sliders.js', array('asb-video-swiper-script'), null, true);
 	}
 
 	if( is_singular( 'product' ) ){
