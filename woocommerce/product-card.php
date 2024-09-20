@@ -9,7 +9,7 @@
 
 global $product;
 
-$image =  wp_get_attachment_image_src( $product->get_id(), 'thumbnail' ) ? wp_get_attachment_image_src( $product->get_id(), 'thumbnail' )[0]  : wc_placeholder_img_src();
+$image =  wp_get_attachment_image_src( $product->get_image_id(), 'thumbnail' ) ? wp_get_attachment_image_src( $product->get_image_id(), 'thumbnail' )[0]  : wc_placeholder_img_src();
 ?>
 <a href="<?php echo $product->get_permalink();?>">
     <article class="product-card">
