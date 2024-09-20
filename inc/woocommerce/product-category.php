@@ -111,3 +111,53 @@ function is_in_product_category($term_id_in){
     return is_term_in_category($obj->term_id, $term_id_in);
 
 }
+
+/**
+ * Получить массив - цепочку категорий от текущей до родительской
+ * 
+ * @return array
+ */
+function asb_get_catalog_breadcrumbs(){
+    $obj = get_queried_object();
+
+    $breadcrumbs = [];
+
+    $term = null;
+
+    if($obj->ID){
+        $breadcrumbs[] = [
+            'current' => true,
+            'url'     => '',
+            'name'    => get_the_title($obj),
+        ];
+
+        $term = get_the_terms( $obj->ID, 'product_cat' )[0];
+
+    }else{
+        $breadcrumbs[] = [
+            'current' => true,
+            'url'     => get_term_link($term, 'product_cat'),
+            'name'    => $obj->name,
+        ];
+
+        $term = get_term($obj->parent);
+    }
+
+    while ($term && $term != null && !is_wp_error($term)) {
+        $breadcrumbs[] = [
+            'current' => false,
+            'url'     => get_term_link($term, 'product_cat'),
+            'name'    => $term->name,
+        ];
+
+        $term = get_term($term->parent);
+    }
+
+    $breadcrumbs[] = [
+        'current' => false,
+        'url'     => '/catalog',
+        'name'    => __('Каталог'),
+    ];
+
+    return array_reverse($breadcrumbs);
+}

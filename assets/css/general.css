@@ -161,6 +161,11 @@ img {
     color: var(--green);
 }
 
+.link-green--active {
+    color: var(--green);
+    font-weight: 500;
+}
+
 .scroll-block {
     overflow-y: auto;
     padding-right: 8px;

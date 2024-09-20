@@ -12,13 +12,8 @@
 ?>
 
 <div class="catalog">
-    <nav class="catalog__breadcrumbs" aria-label="breadcrumb">
-        <a class="link-green catalog__breadcrumbs-link" href="../../../catalog.html">Каталог</a>
-        <span>&gt;</span>
-        <a class="link-green catalog__breadcrumbs-link" href="../video_control.html">Системы видеонаблюдения</a>
-        <span>&gt;</span>
-        <a class="link-green catalog__breadcrumbs-link" href="tvi.html">TVI видеокамеры</a>
-    </nav>
+    
+    <?php wc_get_template_part('catalog/catalog', 'breadcrumbs')?>
 
     <section class="catalog__section">
         <header class="catalog__section-header">
