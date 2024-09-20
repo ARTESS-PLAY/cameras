@@ -1,25 +1,20 @@
 <?php
 /**
- * Single Product Price
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/price.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see     https://woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 3.0.0
+ * Шаблон вывода цены
+ * 
+ * @package ASB Video
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
 ?>
-<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+
+<div class="catalog__section-footer-cost">
+	<span class="catalog__section-footer-new-cost"><?php echo wc_price(wc_get_price_to_display( $product, array( 'price' => $product->get_price() ) ));?></span>
+
+	<?php if($product->is_on_sale()):?>
+		<span class="catalog__section-footer-old-cost"><?php echo wc_price(wc_get_price_to_display( $product, array( 'price' => $product->get_regular_price() ) ));?></span>
+	<?php endif;?>
+</div>

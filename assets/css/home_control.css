@@ -1,4 +1,4 @@
-@import url("catalog_general.css");
+@import url('catalog_general.css');
 
 .wrapper {
     gap: 50px;
@@ -38,7 +38,7 @@
     line-height: 32px !important;
 }
 
-.wrapper .catalog__section-description .catalog__section-text,
+.wrapper .catalog__section-description p,
 .wrapper .catalog__section-description .catalog__section-list-text {
     line-height: 22px;
 }
@@ -258,7 +258,7 @@
 
     .wrapper .catalog__section-components .catalog__section-list-text,
     .wrapper .catalog__section-components .catalog__section-list-text-quantity,
-    .wrapper .catalog__section-description .catalog__section-text,
+    .wrapper .catalog__section-description p,
     .wrapper .catalog__section-description .catalog__section-list-text {
         font-size: 12px;
         line-height: 16px;
