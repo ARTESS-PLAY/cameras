@@ -27,3 +27,27 @@ function get_products_from_category($term_id){
     );
     return new WP_Query( $args );
 }
+
+
+/**
+ * Получить все продукты из метки
+ * 
+ * @param int $slug - slug метки из которой нужно получить продукты
+ * 
+ * @return WP_query
+ */
+function get_products_from_tag($slug){
+    $args = array( 
+        'post_type' => 'product', 
+        'nopaging' => true, 
+        'tax_query' => [
+            'relation' => 'AND',
+            [
+                'taxonomy' => 'product_tag',
+                'field'    => 'slug',
+                'terms'    => array( $slug),
+            ]
+        ]
+    );
+    return new WP_Query( $args );
+}

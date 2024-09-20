@@ -10,4 +10,5 @@
 }
 
 require_once __DIR__ . '/product-category.php';
+require_once __DIR__ . '/product-tags.php';
 require_once __DIR__ . '/products.php';

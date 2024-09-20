@@ -20,9 +20,8 @@ $image =  wp_get_attachment_image_src( $product->get_id(), 'thumbnail' ) ? wp_ge
             <p class="product-card__price"><?php echo wc_price(wc_get_price_to_display( $product, array( 'price' => $product->get_price() ) ));?></p>
             <button class="btn-application product-card__btn">Заказать</button>
         </div>
-        <div class="product-card__mark mark_stock">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/icons/circle_green.svg" alt="Круг">
-            <span class="product-card__mark-name">в наличии</span>
-        </div>
+        <?php 
+            asb_echo_tags($product->get_id());
+        ?>
     </article>
 </a>

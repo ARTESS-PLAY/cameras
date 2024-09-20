@@ -83,6 +83,15 @@
     border-radius: 20px;
 }
 
+.product-card .product-card__mark::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: solid 1px var(--white);
+}
+
 .product-card .product-card__mark .product-card__mark-name {
     font-size: 14px;
     font-weight: 400;
