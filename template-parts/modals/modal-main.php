@@ -10,8 +10,8 @@
             <header class="application__header">
                 <img src="<?php the_field('logo_mini', 'options'); ?>" class="application__logo" alt="Логотип компании АСБ">
                 <div class="application__block">
-                    <p><?php echo esc_html__('Заявка', 'asbvideo') ?> <span class="text-green">&#8470;&nbsp;126325780</span></p>
-                    <p><?php echo esc_html__('на&nbsp;монтаж систем безопасности от', 'asbvideo') ?>&nbsp;12.08.2024г.</p>
+                    <p class="application__block__min"><?php echo date('m.d.Yг. ', time());?></p>
+                    <p class="application__block__name"><?php echo esc_html__('Предварительный рассчёт стоимости установки системы видеонаблюдения', 'asbvideo') ?></p>
                 </div>
                 <div class="application__icons">
                     <div class="application__icon cross-icon"></div>
@@ -26,150 +26,72 @@
                     <span class="application__table-head"><?php echo esc_html__('шт.', 'asbvideo') ?></span>
                     <span class="application__table-head"><?php echo esc_html__('Цена', 'asbvideo') ?></span>
                     <span class="application__table-head"><?php echo esc_html__('Стоимость', 'asbvideo') ?></span>
+                    <?php $total_price = 0;?>
+                    <?php if(have_rows('calc_blocks', 'options')):?>
+                        <?php while(have_rows('calc_blocks', 'options')): the_row()?>
+                            <?php 
+                                $block_price = 0;
+                                $counter = 1;
+                            ?>
+                            <div></div>
+                            <span class="application__table-title"><?php the_sub_field('title')?></span>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
 
-                    <div></div>
-                    <span class="application__table-title"><?php echo esc_html__('Оборудование', 'asbvideo') ?></span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                            <?php if(get_sub_field('created_products')):?>
+                                <?php foreach (get_sub_field('created_products') as $product):?>
+                                    <?php $product_id = $product['created_products_group']['product']->ID?>
+                                    <?php $quantity = $product['created_products_group']['quantity']?>
+                                    <?php $_product = wc_get_product( $product_id );?>
 
-                    <span class="application__table-elem application__table-num">1</span>
-                    <span class="application__table-elem application__table-item-name">TVI Камера видеонаблюдения
-                        Hikvision HiWatch DS-T101</span>
-                    <span class="application__table-elem amount-col">17</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">3290₽</span>
-                    <span class="application__table-elem application__table-cost">9870₽</span>
+                                    <span class="application__table-elem application__table-num"><?php echo $counter?></span>
+                                    <span class="application__table-elem application__table-item-name"><?php echo get_the_title($product_id)?></span>
+                                    <span class="application__table-elem amount-col"><?php echo asb_get_product_unit($product_id) ? $quantity : ''?></span>
+                                    <span class="application__table-elem application__table-item-amount"><?php echo asb_get_product_unit($product_id)?></span>
+                                    <span class="application__table-elem"><?php asb_echo_price($_product)?></span>
+                                    <span class="application__table-elem application__table-cost"><?php echo wc_price($_product->get_price() * $quantity)?></span>
 
-                    <span class="application__table-elem application__table-num">2</span>
-                    <span class="application__table-elem application__table-item-name">IP-видеокамера Hikvision
-                        DS-2DE4220-AE</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">3290₽</span>
-                    <span class="application__table-elem application__table-cost">39990₽</span>
+                                    <?php $block_price += $_product->get_price() * $quantity?>
 
-                    <span class="application__table-elem application__table-num">3</span>
-                    <span class="application__table-elem application__table-item-name">HD-ЕМШ Видеорегистратор Hikvision
-                        DS-7324HQHI-K4</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">13390₽</span>
-                    <span class="application__table-elem application__table-cost">13390₽</span>
+                                    <?php $counter++?>
+                                <?php endforeach?>
+                            <?php endif;?>
 
-                    <span class="application__table-elem application__table-num">4</span>
-                    <span class="application__table-elem application__table-item-name">IP-видеокамера Hikvision
-                        DS-2DE4220-AE</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">2880₽</span>
-                    <span class="application__table-elem application__table-cost">2880₽</span>
+                            <?php if(get_sub_field('not_created_products')):?>
+                                <?php foreach (get_sub_field('not_created_products') as $product):?>
 
-                    <span class="application__table-elem application__table-num">5</span>
-                    <span class="application__table-elem application__table-item-name">Аккумуляторная батарея GP 12-7S
-                        12В</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">720₽</span>
-                    <span class="application__table-elem application__table-cost">720₽</span>
+                                    <span class="application__table-elem application__table-num"><?php echo $counter?></span>
+                                    <span class="application__table-elem application__table-item-name"><?php echo $product['product_title']?></span>
+                                    <span class="application__table-elem amount-col"><?php echo $product['product_unit'] ? $product['product_quantity'] : ''?></span>
+                                    <span class="application__table-elem application__table-item-amount"><?php echo $product['product_unit']?></span>
+                                    <span class="application__table-elem"><?php echo wc_price($product['product_price'])?></span>
+                                    <span class="application__table-elem application__table-cost"><?php echo wc_price($product['product_price'] * $product['product_quantity'])?></span>
 
-                    <span class="application__table-elem application__table-num">6</span>
-                    <span class="application__table-elem application__table-item-name">Жёсткий диск Western Digital
-                        WD20PURX 2ТБ</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">5700₽</span>
-                    <span class="application__table-elem application__table-cost">5700₽</span>
+                                    <?php $block_price += $product['product_price']  * $quantity?>
 
-                    <div></div>
-                    <span class="application__table-total">Всего за оборудование:</span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <span class="application__table-total-cost">72550₽</span>
+                                    <?php $counter++?>
+                                <?php endforeach?>
+                            <?php endif;?>
 
-                    <div></div>
-                    <span class="application__table-title">Монтажные материалы</span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                            <div></div>
+                            <span class="application__table-total"><?php _e('Всего за', 'asbvideo')?> <?php the_sub_field('title')?>:</span>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <span class="application__table-total-cost"><?php echo wc_price($block_price)?></span>
+                            <?php $total_price += $block_price?>
+                        <?php endwhile?>
+                    <?php endif;?>
 
-                    <span class="application__table-elem application__table-num">1</span>
-                    <span class="application__table-elem application__table-item-name">Комбинированный кабель ParLan
-                        U/UTP Cat5e 4х2х0,52 PVC</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">бухта.</span>
-                    <span class="application__table-elem">4480₽</span>
-                    <span class="application__table-elem application__table-cost">4480₽</span>
-
-                    <span class="application__table-elem application__table-num">2</span>
-                    <span class="application__table-elem application__table-item-name">Кабельный канал DIRECT ELECTRIC
-                        ПВХ 25x16</span>
-                    <span class="application__table-elem amount-col">40</span>
-                    <span class="application__table-elem application__table-item-amount">м</span>
-                    <span class="application__table-elem">56₽</span>
-                    <span class="application__table-elem application__table-cost">2240₽</span>
-
-                    <span class="application__table-elem application__table-num">3</span>
-                    <span class="application__table-elem application__table-item-name">Расходный материал</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">компл.</span>
-                    <span class="application__table-elem">2000₽</span>
-                    <span class="application__table-elem application__table-cost">2000₽</span>
-
-                    <div></div>
-                    <span class="application__table-total">Всего за монтажные материалы:</span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <span class="application__table-total-cost">8720₽</span>
-
-                    <div></div>
-                    <span class="application__table-title">Выполняемые виды работ</span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-
-                    <span class="application__table-elem application__table-num">1</span>
-                    <span class="application__table-elem application__table-item-name">Работы по монтажу кабельных
-                        коммуникаций</span>
-                    <span class="application__table-elem amount-col">120</span>
-                    <span class="application__table-elem application__table-item-amount">м</span>
-                    <span class="application__table-elem">150₽</span>
-                    <span class="application__table-elem application__table-cost">18000₽</span>
-
-                    <span class="application__table-elem application__table-num">2</span>
-                    <span class="application__table-elem application__table-item-name">Монтаж и подключение
-                        оборудования</span>
-                    <span class="application__table-elem amount-col">3</span>
-                    <span class="application__table-elem application__table-item-amount">шт.</span>
-                    <span class="application__table-elem">1000₽</span>
-                    <span class="application__table-elem application__table-cost">3000₽</span>
-
-                    <span class="application__table-elem application__table-num">3</span>
-                    <span class="application__table-elem application__table-item-name">Инженерные и пусконакладочные
-                        работы</span>
-                    <span class="application__table-elem amount-col">1</span>
-                    <span class="application__table-elem application__table-item-amount">компл.</span>
-                    <span class="application__table-elem">5000₽</span>
-                    <span class="application__table-elem application__table-cost">5000₽</span>
-
-                    <div></div>
-                    <span class="application__table-total"><?php echo esc_html__('Всего за работу:', 'asbvideo') ?></span>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <span class="application__table-total-cost">32000₽</span>
                 </div>
             </main>
 
             <footer class="application__footer footer-amount">
                 <div class="application__footer-amount-block">
                     <span class="application__footer-amount-title"><?php echo esc_html__('ИТОГО ПО СМЕТЕ:', 'asbvideo') ?></span>
-                    <span class="application__footer-amount-price">113270₽</span>
+                    <span class="application__footer-amount-price"><?php echo wc_price($total_price)?></span>
                 </div>
                 <div class="application__footer-block">
                     <aside class="application__footnotes">

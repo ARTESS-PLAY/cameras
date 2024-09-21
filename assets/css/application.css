@@ -49,13 +49,19 @@
 
 .application .application__block {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.application .application__block p {
+.application .application__block__name {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
+}
+
+.application .application__block__min {
+    font-size: 16px !important;
+    line-height: 20px !important;
 }
 
 .application .application__block .text-green {
@@ -78,19 +84,19 @@
 }
 
 .application .cross-icon {
-    background-image: url("../img/icons/cross.svg");
+    background-image: url('../img/icons/cross.svg');
 }
 
 .application .cross-icon:hover {
-    background-image: url("../img/icons/cross_active.svg");
+    background-image: url('../img/icons/cross_active.svg');
 }
 
 .application .download-icon {
-    background-image: url("../img/icons/download.svg");
+    background-image: url('../img/icons/download.svg');
 }
 
 .application .download-icon:hover {
-    background-image: url("../img/icons/download_active.svg");
+    background-image: url('../img/icons/download_active.svg');
 }
 
 .application .application__content {
@@ -98,7 +104,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .application .application__info-content {
@@ -541,10 +547,14 @@
         height: 50px;
     }
 
-    .application .application__block p,
+    .application .application__block__name,
     .application .application__info-block-text {
         font-size: 16px;
         line-height: 20px;
+    }
+    .application .application__block__min {
+        font-size: 12px !important;
+        line-height: 14px !important;
     }
 
     .application .application__icon,
@@ -713,7 +723,7 @@
         height: 36px;
     }
 
-    .application .application__block p,
+    .application .application__block__name,
     .application .application__info-block-title span,
     .application .application__info-block-time,
     .application__info-block-notes span,
@@ -721,6 +731,10 @@
     .application .application__download span {
         font-size: 12px !important;
         line-height: 16px !important;
+    }
+    .application .application__block__min {
+        font-size: 10px !important;
+        line-height: 12px !important;
     }
 
     .application .application__info-blocks {
