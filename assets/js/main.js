@@ -5,8 +5,6 @@ const setupCalculator = (inputId, calculatorId, maxDigits, placeholder) => {
     const deleteButton = calculator.querySelector('.info__calculator-btn-delete');
     const enterButton = calculator.querySelector('.info__calculator-btn-enter');
 
-    console.log(calcInput);
-
     const setPlaceholder = () => {
         if (calcInput.value === '') {
             calcInput.value = placeholder;
@@ -24,12 +22,14 @@ const setupCalculator = (inputId, calculatorId, maxDigits, placeholder) => {
     };
 
     calcInput.addEventListener('click', () => {
+        calcInput.classList.remove('info__input--error');
         removePlaceholder();
         calculator.classList.remove('info__calculator-closed');
     });
 
     numberButtons.forEach((button) => {
         button.addEventListener('click', () => {
+            calcInput.classList.remove('info__input--error');
             removePlaceholder();
             if (limitDigits(calcInput.value)) {
                 calcInput.value =
@@ -43,12 +43,14 @@ const setupCalculator = (inputId, calculatorId, maxDigits, placeholder) => {
 
     deleteButton.addEventListener('click', () => {
         calcInput.value = calcInput.value.slice(0, -1);
+        calcInput.classList.remove('info__input--error');
         if (calcInput.value === '') {
             setPlaceholder();
         }
     });
 
     enterButton.addEventListener('click', () => {
+        calcInput.classList.remove('info__input--error');
         setPlaceholder();
         calculator.classList.add('info__calculator-closed');
     });

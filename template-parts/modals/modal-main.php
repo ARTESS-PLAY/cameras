@@ -8,7 +8,7 @@
    <div class="application" id="calculation-application">
         <section class="application__modal application__modal-calculation">
             <header class="application__header">
-                <img src="../assets/img/icons/logo_short.svg" class="application__logo" alt="Логотип компании АСБ">
+                <img src="<?php the_field('logo_mini', 'options'); ?>" class="application__logo" alt="Логотип компании АСБ">
                 <div class="application__block">
                     <p><?php echo esc_html__('Заявка', 'asbvideo') ?> <span class="text-green">&#8470;&nbsp;126325780</span></p>
                     <p><?php echo esc_html__('на&nbsp;монтаж систем безопасности от', 'asbvideo') ?>&nbsp;12.08.2024г.</p>
@@ -176,13 +176,13 @@
                         <div class="application__license">
                             <span class="application__license-title"><?php echo esc_html__('Лицензия:', 'asbvideo') ?></span>
                             <div class="application__license-number">
-                                <img src="../assets/img/icons/document.svg" alt="Сертифицированный документ">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/document.svg" alt="Сертифицированный документ">
                                 <span>МЧС России &#8470;&nbsp;77-Б/02699 от&nbsp;01.09.2010</span>
                             </div>
                         </div>
                         <div class="application__guarantee">
                             <div class="application__guarantee-text">
-                                <img src="../assets/img/icons/guarantee.svg" alt="Знак гарантии">
+                                <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/guarantee.svg" alt="Знак гарантии">
                                 <span><?php echo esc_html__('Гарантия на оборудование и выполненные работы:', 'asbvideo') ?></span>
                             </div>
                             <span class="application__guarantee-year"><?php echo esc_html__('1 год', 'asbvideo') ?></span>

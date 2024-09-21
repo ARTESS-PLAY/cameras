@@ -94,4 +94,12 @@ if (function_exists('acf_add_options_page')) {
 		'capability' => esc_html__('edit_posts'),
 		'redirect' => false
 	));
+
+	acf_add_options_page(array(
+		'page_title' => esc_html__('Настройки модалок', 'asbvideo'),
+		'menu_title' => esc_html__('Настройки модалок', 'asbvideo'),
+		'menu_slug'  => esc_html__('my-modals'),
+		'capability' => esc_html__('edit_posts'),
+		'redirect' => false
+	));
 }

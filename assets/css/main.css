@@ -69,6 +69,11 @@
     font-weight: 600;
     font-size: 21px;
     line-height: 26px;
+    transition: 0.3s border-color;
+}
+
+.info__input--error {
+    border-color: var(--red) !important;
 }
 
 .wrapper .info .info__calculation .info__input-area .info__input::-webkit-outer-spin-button,

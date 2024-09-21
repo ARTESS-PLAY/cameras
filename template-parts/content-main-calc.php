@@ -52,5 +52,5 @@
 			<span class="info__input-name"><?php echo esc_html__('настройка сети', 'asbvideo') ?></span>
 		</label>
 	</div>
-	<button class="info__btn"><?php echo esc_html__('Рассчитать стоимость', 'asbvideo') ?></button>
+	<button class="info__btn btn_open-calculation-application"><?php echo esc_html__('Рассчитать стоимость', 'asbvideo') ?></button>
 </div>

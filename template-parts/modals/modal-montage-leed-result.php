@@ -9,7 +9,7 @@
 <div class="application" id="new-application">
     <section class="application__modal application__modal-info">
         <header class="application__header">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/icons/logo_short.svg" class="application__logo" alt="Логотип компании АСБ">
+            <img src="<?php the_field('logo_mini', 'options'); ?>" class="application__logo" alt="Логотип компании АСБ">
             <div class="application__block">
                 <p><?php echo esc_html__('Заявка', 'asbvideo') ?> <span class="text-green">&#8470;&nbsp;126325780</span></p>
                 <p><?php echo esc_html__('на&nbsp;монтаж систем безопасности от&nbsp;12.08.2024г.', 'asbvideo') ?></p>

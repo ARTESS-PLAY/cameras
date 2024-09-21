@@ -30,7 +30,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div>
-	<div class="info__calculation-btn-wrapper">
+	<div class="info__calculation-btn-wrapper btn_open-calculation-application">
 		<button class="info__calculation-btn">
 			<img src="<?php bloginfo('template_url'); ?>/assets/svg/calculator.svg" alt="Калькулятор">
 			<span class="info__calculation-btn-text"><?php echo esc_html__('Рассчитать стоимость', 'asbvideo') ?></span>
@@ -47,5 +47,7 @@ get_header(); ?>
 </div>
 
 <?php get_template_part('template-parts/modals/modal', 'main'); ?>
+<?php get_template_part('template-parts/modals/modal', 'montage-leed-result'); ?>
+<?php get_template_part('template-parts/modals/modal', 'montage-leed'); ?>
 
 <?php get_footer(); ?>
