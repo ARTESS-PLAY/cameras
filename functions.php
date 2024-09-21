@@ -72,6 +72,10 @@ function asbvideo_scripts()
 		wp_enqueue_style('asb-video-camera-style', get_template_directory_uri() . '/assets/css/camera.css');
     }
 
+	if( is_singular( 'solutions' ) ){
+		wp_enqueue_style('asb-video-solutions-style', get_template_directory_uri() . '/assets/css/home_control.css');
+    }
+
 	if( is_product_category() ){
 		wp_enqueue_style('asb-video-tvi-style', get_template_directory_uri() . '/assets/css/tvi.css');
 		wp_enqueue_style('asb-video-video_control-style', get_template_directory_uri() . '/assets/css/video_control.css');

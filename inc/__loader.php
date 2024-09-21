@@ -6,5 +6,6 @@
  * @package ASB Video
  */
 
+require_once __DIR__ . '/lib/vendor/autoload.php';
 require_once __DIR__ . '/custom-types.php';
 require_once __DIR__ . '/woocommerce/index.php';

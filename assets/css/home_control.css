@@ -39,20 +39,33 @@
 }
 
 .wrapper .catalog__section-description p,
+.wrapper .solution li,
 .wrapper .catalog__section-description .catalog__section-list-text {
     line-height: 22px;
 }
 
-.wrapper .catalog__section-description .catalog__section-list {
+.wrapper .catalog__section-description .catalog__section-list,
+.wrapper .solution ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.wrapper .catalog__section-description .catalog__section-list-point {
+.wrapper .catalog__section-description .catalog__section-list-point,
+.wrapper .solution li {
     display: flex;
     gap: 16px;
     align-items: baseline;
+}
+
+.wrapper .solution li::before {
+    content: '';
+    display: block;
+    width: 8px;
+    min-width: 8px;
+    height: 8px;
+    background-color: var(--green);
+    border-radius: 50%;
 }
 
 .wrapper .catalog__section-description .catalog__section-list-point img {
@@ -60,7 +73,8 @@
     height: 8px;
 }
 
-.wrapper .catalog__section-description .catalog__section-list-block {
+.wrapper .catalog__section-description .catalog__section-list-block,
+.wrapper .solution div {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -137,6 +151,9 @@
 .wrapper .catalog__section-components .catalog__section-list-text-quantity {
     line-height: 16px;
     text-wrap: nowrap;
+    width: 40px;
+    min-width: 40px;
+    display: block;
 }
 
 .wrapper .catalog__section-components .catalog__section-list-item img {
@@ -259,6 +276,7 @@
     .wrapper .catalog__section-components .catalog__section-list-text,
     .wrapper .catalog__section-components .catalog__section-list-text-quantity,
     .wrapper .catalog__section-description p,
+    .wrapper .solution li,
     .wrapper .catalog__section-description .catalog__section-list-text {
         font-size: 12px;
         line-height: 16px;

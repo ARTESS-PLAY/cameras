@@ -76,7 +76,7 @@
                             <?php endif;?>
 
                             <div></div>
-                            <span class="application__table-total"><?php _e('Всего за', 'asbvideo')?> <?php the_sub_field('title')?>:</span>
+                            <span class="application__table-total"><?php _e('Всего за', 'asbvideo')?> <?php echo mb_strtolower(get_sub_field('title'))?>:</span>
                             <div></div>
                             <div></div>
                             <div></div>
