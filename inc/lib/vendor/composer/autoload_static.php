@@ -7,71 +7,51 @@ namespace Composer\Autoload;
 class ComposerStaticInita65283fcef6704dde94d49bd58f4d574
 {
     public static $prefixLengthsPsr4 = array (
-        'C' => 
+        'S' => 
         array (
-            'Com\\Tecnick\\Unicode\\Data\\' => 25,
-            'Com\\Tecnick\\Unicode\\' => 20,
-            'Com\\Tecnick\\Pdf\\Page\\' => 21,
-            'Com\\Tecnick\\Pdf\\Image\\' => 22,
-            'Com\\Tecnick\\Pdf\\Graph\\' => 22,
-            'Com\\Tecnick\\Pdf\\Font\\' => 21,
-            'Com\\Tecnick\\Pdf\\Encrypt\\' => 24,
-            'Com\\Tecnick\\Pdf\\' => 16,
-            'Com\\Tecnick\\File\\' => 17,
-            'Com\\Tecnick\\Color\\' => 18,
-            'Com\\Tecnick\\Barcode\\' => 20,
+            'Svg\\' => 4,
+            'Sabberworm\\CSS\\' => 15,
+        ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
+        ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
+        'D' => 
+        array (
+            'Dompdf\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Com\\Tecnick\\Unicode\\Data\\' => 
+        'Svg\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-unicode-data/src',
+            0 => __DIR__ . '/..' . '/dompdf/php-svg-lib/src/Svg',
         ),
-        'Com\\Tecnick\\Unicode\\' => 
+        'Sabberworm\\CSS\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-unicode/src',
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
-        'Com\\Tecnick\\Pdf\\Page\\' => 
+        'Masterminds\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf-page/src',
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'Com\\Tecnick\\Pdf\\Image\\' => 
+        'FontLib\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf-image/src',
+            0 => __DIR__ . '/..' . '/dompdf/php-font-lib/src/FontLib',
         ),
-        'Com\\Tecnick\\Pdf\\Graph\\' => 
+        'Dompdf\\' => 
         array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf-graph/src',
-        ),
-        'Com\\Tecnick\\Pdf\\Font\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf-font/src',
-        ),
-        'Com\\Tecnick\\Pdf\\Encrypt\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf-encrypt/src',
-        ),
-        'Com\\Tecnick\\Pdf\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-pdf/src',
-        ),
-        'Com\\Tecnick\\File\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-file/src',
-        ),
-        'Com\\Tecnick\\Color\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-color/src',
-        ),
-        'Com\\Tecnick\\Barcode\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/tecnickcom/tc-lib-barcode/src',
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
