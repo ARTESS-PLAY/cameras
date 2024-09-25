@@ -15,4 +15,8 @@ get_header(); ?>
 
 <?php get_template_part('template-parts/content', 'projects-slider'); ?>
 
+<div class="pictures">
+	<img src="<?php the_field('working_img'); ?>" class="pictures__worker">
+</div>
+
 <?php get_footer(); ?>

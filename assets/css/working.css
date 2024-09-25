@@ -80,12 +80,9 @@
 
 .wrapper .pictures .pictures__worker {
     position: absolute;
-    width: 90%;
-    height: auto;
-    border-radius: 16px;
     right: 0;
-    top: 40%;
-    transform: scaleX(-1) translateY(-40%);
+    bottom: 5%;
+    max-height: 100%;
 }
 
 @media (min-width: 1440px) and (max-width: 1919.89px) {

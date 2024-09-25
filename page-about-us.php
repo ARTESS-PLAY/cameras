@@ -19,7 +19,8 @@ get_header(); ?>
 		</p>
 	</div>
 	<div class="info__statistics">
-		<?php the_field('about_label'); ?>
+		<p class="info__statistics-title">
+			<?php the_field('about_label'); ?>
 		</p>
 		<div class="info__statistics-items">
 
@@ -41,7 +42,6 @@ get_header(); ?>
 </div>
 
 <div class="pictures">
-	<img src="<?php the_field('about_img_bg'); ?>" class="pictures__building">
 	<img src="<?php the_field('about_img'); ?>" class="pictures__man">
 </div>
 <?php get_footer(); ?>

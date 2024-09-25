@@ -25,7 +25,7 @@
         
         <?php if($products->have_posts()):?>
 
-            <div class="catalog__section-content content-articles scroll-block">
+            <div class="catalog__section-content content-articles-grid scroll-block">
                 <?php while ( $products->have_posts() ) : $products->the_post();?>
                     <?php wc_get_template_part('product', 'card')?>
                 <?php endwhile;?>

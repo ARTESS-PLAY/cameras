@@ -30,10 +30,10 @@ get_header(); ?>
 
 	</div>
 </div>
-</div>
+
 
 <div class="pictures">
-	<img src="<?php the_field('working_img'); ?> " class="pictures__worker" alt="Работник производит монтажные работы">
+	<img src="<?php the_field('working_img'); ?>" class="pictures__worker">
 </div>
 
 <?php get_footer(); ?>
