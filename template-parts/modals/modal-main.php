@@ -5,8 +5,14 @@
  * 
  * @package ASB Video
  */
+
+ defined( 'ABSPATH' ) || exit;
+
+$rooms        = $args['rooms']; 
+$meters       = $args['meters']; 
+$need_setting = $args['need_setting']; 
+
 ?>
-<div class="application" id="calculation-application">
     <section class="application__modal application__modal-calculation">
         <header class="application__header">
             <img src="<?php the_field('logo_mini', 'options'); ?>" class="application__logo" alt="Логотип компании АСБ">
@@ -116,4 +122,3 @@
             </div>
         </footer>
     </section>
-</div>

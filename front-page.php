@@ -46,7 +46,9 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_template_part('template-parts/modals/modal', 'main'); ?>
+<div class="application" id="calculation-application">
+</div>
+
 <?php get_template_part('template-parts/modals/modal', 'montage-leed-result'); ?>
 <?php get_template_part('template-parts/modals/modal', 'montage-leed'); ?>
 

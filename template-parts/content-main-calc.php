@@ -41,7 +41,7 @@
 	</div>
 	<div class="info__input-area">
 		<label class="info__input-checkbox">
-			<input class="info__checkbox-hidden" type="checkbox">
+			<input class="info__checkbox-hidden" type="checkbox" id='need_setting'>
 			<div class="info__checkbox">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none"
 					viewBox="0 0 12 9.75" class="info__checkbox-icon">

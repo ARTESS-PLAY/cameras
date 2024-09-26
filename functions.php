@@ -33,7 +33,7 @@ function asbvideo_scripts()
 	if (is_front_page()) {
 		wp_enqueue_style('asb-video-main-style', get_template_directory_uri() . '/assets/css/main.css');
 		wp_enqueue_script('asb-video-main-script', get_template_directory_uri() . '/assets/js/main.js', array(), null, true);
-		wp_enqueue_script('asb-video-main_application-script', get_template_directory_uri() . '/assets/js/main_application.js', array(), null, true);
+		wp_enqueue_script('asb-video-main_application-script', get_template_directory_uri() . '/assets/js/main_application.js', array('jquery'), null, true);
 	}
 	
 	if (is_page_template('page-about-us.php')) {
