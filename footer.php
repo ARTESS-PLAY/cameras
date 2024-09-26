@@ -54,6 +54,10 @@
     <img src="<?php bloginfo('template_url') ?>/assets/svg/vectors/vector_3.svg" class="footer__vector-mobile-2" alt="Вектор">
 </footer>
 
+<script>
+    var ajaxUrl = '<?php echo admin_url( "admin-ajax.php" ) ?>';
+</script>
+
 <?php wp_footer(); ?>
 </body>
 
